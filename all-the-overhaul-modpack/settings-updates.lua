@@ -358,7 +358,7 @@ if mods["space-exploration"] then
     change_setting("shotguns-hit-friendly", false)
 end
 --ta miners
-if mods["WipMod_TA-miners"] then
+if mods["WipMod_TA-miners"] or mods["TA-Miners-Reloaded"] then
     change_setting("ta-vanilla-recipes", "normal")
     change_setting("ta-maxium-tier", "mantle")
     change_setting("ta-modded-kr2", false)
