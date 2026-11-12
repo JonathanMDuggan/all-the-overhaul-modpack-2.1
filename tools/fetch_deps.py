@@ -130,9 +130,6 @@ def download(release, target, username, token):
     digest = hashlib.sha1()
     temporary = destination.with_suffix(".part")
     with urllib.request.urlopen(request, timeout=300) as response, open(temporary, "wb") as output:
-        if "zip" not in (response.headers.get("Content-Type") or ""):
-            temporary.unlink(missing_ok=True)
-            raise SystemExit("The mod portal did not return a zip file. Is the username/token correct?")
         while True:
             chunk = response.read(1 << 20)
             if not chunk:
@@ -141,7 +138,8 @@ def download(release, target, username, token):
             output.write(chunk)
     if digest.hexdigest() != release["sha1"]:
         temporary.unlink(missing_ok=True)
-        raise SystemExit("Checksum mismatch for " + release["file_name"])
+        raise SystemExit("Checksum mismatch for %s. If this is the first file, the username/token was probably "
+                         "rejected (the portal then returns a login page instead of the mod)." % release["file_name"])
     temporary.replace(destination)
     return "%.1f MB" % (destination.stat().st_size / 1e6)
 
