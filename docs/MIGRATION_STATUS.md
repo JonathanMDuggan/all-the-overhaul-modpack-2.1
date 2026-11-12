@@ -8,17 +8,17 @@ Branch `upstream-2.2.7` is the untouched upstream state.
 
 ## Evidence levels
 
+Tested on 2026-11-12 with Factorio 2.1.24 and the newest 2.1 releases of all dependencies (65 mods from the mod portal
+plus the mods in `ported-dependencies/`), in a separate mods folder filled by `tools/fetch_deps.py`.
+
 | Area | Level |
 | --- | --- |
-| All 156 Lua files compile with Factorio 2.1.24's Lua | tested in engine |
-| `util/legacy-recipe.lua` (jalm replacement), new `atom.util` helpers | tested in engine (unit checks) |
-| Fluid furnace, brass pipe + pipe to ground, recipe / item / technology shapes used by the port | loaded in Factorio 2.1.24 against base only |
-| 248k-Redux prototype names (260 references) | checked statically against 248k-Redux 2.1.49 |
-| Everything that touches Krastorio 2, Space Exploration, 5dim, BZ, Bio Industries, AAI, mini-machines ... | **unverified**, needs a load test with the real mods |
-| Full pack load, gameplay, save migration from 2.0 | **not run** |
-
-The engine check is `build_check.py` style: a throwaway mod that compiles ATOM's sources and loads the parts that only
-need the base game, run with `factorio --dump-data` in an isolated mod directory.
+| Whole pack: settings, data, data-updates, data-final-fixes | **loads without errors** (`factorio --dump-data`, exit 0) |
+| New game: map creation (all `on_init` scripts, SE universe) and 600 ticks | **runs without errors** (`--create`, `--benchmark`) |
+| ATOM's recipe helper lookups | every recipe and item ATOM edits through `util/legacy-recipe.lua` exists; one merge, see Deviations |
+| Balance: do recipes, technologies and unlock order match the 2.0 pack? | **not checked** |
+| Playing: GUIs, progression, research tree reachability, multiplayer | **not checked** (needs a human) |
+| Loading a Factorio 2.0 ATOM save | **not run** |
 
 ## What changed for the 2.1 API
 
@@ -39,6 +39,26 @@ need the base game, run with `factorio --dump-data` in an isolated mod directory
   (it indexes the item name). Left as is.
 - Science packs were `tool`s in 2.0, so the sorter never re-sorted the science pack items and the 248k burner never
   got burn recipes for them. Both skip science packs explicitly now (`atom.util.item.getSciencePacks`).
+
+## Fixes needed for the 2.1 dependency versions
+
+- 5dim renamed technologies: `5d-radars-<n>` -> `radar-<n+1>`, `5d-flamethrower-turrets-<n>` -> `flamethrower-<n+1>`.
+  The mapping is inferred from the tier comments in ATOM's code, not checked against 5dim's 2.0 source.
+- `data.raw.tool` is nil when no mod defines a tool; loops over it are guarded.
+- `atom.util.Technology.addIngredient` skips a science pack the technology already has (5dim 2.1 already lists some).
+- `removeByName` / `removeByNamePattern` remove unlock effects backwards; removing forwards skipped adjacent entries.
+- Material recipes no longer set `subgroup = ""` (rejected by 2.1).
+- bzlib 2.1.4 keeps one shared settings table for all mods that use it; with Cobalt2 and 5dim present this crashes
+  bztitanium2 (reproducible with only bzlib + bztitanium2 + Cobalt2 + 5dim_core). `ported-dependencies/bzlib` 2.1.5
+  resolves the settings per calling mod. Worth reporting upstream (https://github.com/Morganite-MLI/bzlib).
+- BrimStuff removed entries from crafting category lists by assigning nil, leaving holes; fixed in the ported copy.
+
+## Open points found while testing
+
+- 5dim_battlefield 2.1 adds content the 2.0 pack never had (artillery turret tiers, slow turrets, mortar turrets,
+  grenades, land mines, combat robots, sniper rifle, ...). ATOM does not hide or rebalance any of it yet.
+- mini-machines 9.5.9 requires mini-micro-settings, which ATOM's history calls incompatible with its balance.
+- `5d-masher-05` already contains concrete (20) in 5dim 2.1; ATOM sets it to 4 as it did before.
 
 ## Deviations
 
@@ -69,8 +89,8 @@ Made optional because no Factorio 2.1 release exists and they could not be porte
 
 ## Next steps
 
-1. Install the 2.1 releases of all dependencies plus the mods from `ported-dependencies/`.
-2. Load test with the 2.1 releases of all dependencies and fix what the game reports.
+1. Play-test: early game progression, research tree, the new 5dim content.
+2. Compare recipes and technologies with a Factorio 2.0 install of the pack (needs the 2.0 mod set).
 3. Compare jalm 2.0.1's `stdlib/data/recipe.lua` with `util/legacy-recipe.lua`.
 4. Changelog entry and a save migration test from a 2.0 save.
 

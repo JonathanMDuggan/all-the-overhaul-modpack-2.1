@@ -10,6 +10,7 @@ Each folder is a complete mod: copy it into the Factorio `mods` folder as is.
 | ThemTharHills-Updated | commit `adc01e9` (2.0.12) | 3.0.0 | MIT | https://github.com/AtelierAmber/ThemTharHills-Updated |
 | BrimStuff-Updated | commit `1ea1185` (2.0.15) | 3.0.0 | MIT | https://github.com/AtelierAmber/BrimStuff-Updated |
 | LasingAround-Updated | commit `0caf4c8` (2.0.14) | 3.0.0 | MIT | https://github.com/AtelierAmber/LasingAround-Updated |
+| bzlib | portal release 2.1.4 | 2.1.5 | MIT | https://github.com/Morganite-MLI/bzlib |
 | DoubleWagons (Black Wagons) | commit `e7b2a2a` (1.0.1) | 1.1.0 | Unlicense | https://github.com/Alkumist/DoubleWagons |
 
 Licenses are as listed on the mod portal. All credit goes to the original authors (ashier / AtelierAmber for the
@@ -38,3 +39,9 @@ DoubleWagons is not in git because its graphics are about 340 MB. Its port is on
 Each mod, and all six together, load without errors in Factorio 2.1.24 with only the base game (LasingAround with
 flib; DoubleWagons also with elevated rails), using `factorio --dump-data`. Not tested: their compatibility code for
 Krastorio 2, Space Exploration, BZ, 248k and the other mods ATOM combines them with, and anything in a running game.
+
+bzlib is not a port but a bug fix: version 2.1.4 shares one settings table between all mods that use it, which crashes
+bztitanium2 when Cobalt2 and 5dim are installed. See `docs/MIGRATION_STATUS.md`.
+
+Update 2026-11-12: all of these were also loaded together with ATOM and the full Factorio 2.1 dependency set; the pack
+loads, creates a new game and runs 600 ticks without errors.
