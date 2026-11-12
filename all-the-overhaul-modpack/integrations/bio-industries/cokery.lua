@@ -131,7 +131,7 @@ recipe3.apply()
 local woodToCoalRecipe = atom.util.Recipe({
     type = "recipe",
     name = "wood-to-coal",
-    category = "biofarm-mod-smelting",
+    categories = { "biofarm-mod-smelting" },
     icons = {
         { icon = "__base__/graphics/icons/coal.png", icon_size = 64, icon_mipmaps = 4 },
         atom.util.icon.createSmallIcon({ icon = "__base__/graphics/icons/wood.png", icon_size = 64, icon_mipmaps = 4 })
@@ -153,7 +153,7 @@ woodToCoalRecipe.apply()
 local woodPulpToCoalDustRecipe = atom.util.Recipe({
     type = "recipe",
     name = "wood-pulp-to-coal-dust",
-    category = "biofarm-mod-smelting",
+    categories = { "biofarm-mod-smelting" },
     icons = {
         atom.processing.materials.coal.icons.dust,
         atom.util.icon.createSmallIcon({ icon = "__Bio_Industries_2__/graphics/icons/woodpulp_64.png", icon_size = 64 })
@@ -175,7 +175,7 @@ woodPulpToCoalDustRecipe.apply()
 local coalDustToCokeRecipe = atom.util.Recipe({
     type = "recipe",
     name = "coal-dust-to-coke",
-    category = "biofarm-mod-smelting",
+    categories = { "biofarm-mod-smelting" },
     icons = {
         { icon = "__Krastorio2Assets__/icons/items/coke.png", icon_size = 64, icon_mipmaps = 4 },
         atom.util.icon.createSmallIcon(atom.processing.materials.coal.icons.dust)
@@ -202,7 +202,7 @@ local coalDustToRawGraphiteRecipe = atom.util.Recipe({
         { icon = "__Nylon2__/graphics/icons/raw-graphite.png", icon_size = 128 },
         atom.util.icon.createSmallIcon(atom.processing.materials.coal.icons.dust)
     },
-    category = "biofarm-mod-smelting",
+    categories = { "biofarm-mod-smelting" },
     subgroup = "carbon",
     order = "h[graphite]",
     enabled = false,

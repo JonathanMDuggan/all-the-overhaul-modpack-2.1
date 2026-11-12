@@ -43,7 +43,7 @@ data:extend({
         type = "technology",
         name = "bismuth-smelting",
         icons = { table.deepcopy(data.raw.recipe["atom-bismuth-plate"].icons[1]) },
-        research_trigger = { type = "mine-entity", entity = "bismuth-ore" },
+        research_trigger = { type = "mine-entity", entities = { "bismuth-ore" } },
         prerequisites = { "kr-fluids-chemistry" },
         effects = {
             {

@@ -16,7 +16,7 @@ data:extend({
     {
         type = "recipe",
         name = "hcp-board",
-        category = "electronics-machine",
+        categories = { "electronics-machine" },
         energy_required = 10,
         enabled = false,
         ingredients = {
@@ -31,7 +31,7 @@ data:extend({
     {
         type = "recipe",
         name = "hcp-circuit",
-        category = "crafting-with-fluid",
+        categories = { "crafting-with-fluid" },
         energy_required = 1,
         enabled = false,
         ingredients = {
@@ -50,7 +50,7 @@ data:extend({
     {
         type = "recipe",
         name = "pcb-recipe",
-        category = "crafting-with-fluid",
+        categories = { "crafting-with-fluid" },
         energy_required = 2,
         enabled = false,
         ingredients = {

@@ -8,8 +8,8 @@ table.assign(data["raw"].recipe["low-quality-advanced-circuit"], {
         { type = "item", name = "circuit-board", amount = 1 }
     },
     results = {
-        { type = "item", amount = 2, name = "advanced-circuit", probability = 0.75 },
-        { type = "item", amount = 2, name = "se-scrap", probability = 0.25 }
+        { type = "item", amount = 2, name = "advanced-circuit", independent_probability = 0.75 },
+        { type = "item", amount = 2, name = "se-scrap", independent_probability = 0.25 }
     }
 })
 
@@ -35,7 +35,7 @@ thoriumLandfill.apply()
 
 -- Alternative glass recipe uses smelters and allows productivity
 local glass = atom.util.Recipe("soda-lime-glass")
-glass.prototype.category = "smelting"
+glass.prototype.categories = { "smelting" }
 glass.prototype.always_show_made_in = true
 glass.allowProductivity()
 

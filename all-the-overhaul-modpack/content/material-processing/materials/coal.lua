@@ -13,7 +13,7 @@ local config = atom.processing.util.prepareConfig({
 local create = atom.processing.create(config)
 
 local dust = create.item("dust")
-dust.fuel_category = "chemical"
+dust.fuel_categories = { "chemical" }
 dust.fuel_value = "3MJ"
 
 atom.util.applyAll({

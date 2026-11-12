@@ -19,10 +19,10 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         oreToPlate = {
-            { type = "item", name = "cobaltite-ore", amount = 1, probability = 0.5 }
+            { type = "item", name = "cobaltite-ore", amount = 1, independent_probability = 0.5 }
         },
         dustToPlate = {
-            { type = "item", name = "cobaltite-ore", amount = 1, probability = 0.1 }
+            { type = "item", name = "cobaltite-ore", amount = 1, independent_probability = 0.1 }
         }
     }
 })

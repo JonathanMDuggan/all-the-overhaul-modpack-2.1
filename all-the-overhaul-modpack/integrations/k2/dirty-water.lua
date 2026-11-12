@@ -3,9 +3,9 @@ local function dirtyWaterRecipe(recipeName, mainResult, mainProbability, seconda
     table.assign(recipe, {
         results = {
             { type = "fluid", name = "water", amount = 90, ignored_by_productivity = 90, ignored_by_stats = 90 },
-            { type = "item", name = "atom-stone-dust", amount = 1, probability = 0.3 },
-            { type = "item", name = mainResult, amount = 1, probability = mainProbability },
-            secondaryResult and { type = "item", name = secondaryResult, amount = 1, probability = secondaryProbability } or nil
+            { type = "item", name = "atom-stone-dust", amount = 1, independent_probability = 0.3 },
+            { type = "item", name = mainResult, amount = 1, independent_probability = mainProbability },
+            secondaryResult and { type = "item", name = secondaryResult, amount = 1, independent_probability = secondaryProbability } or nil
         },
         main_product = mainResult,
         subgroup = "water",

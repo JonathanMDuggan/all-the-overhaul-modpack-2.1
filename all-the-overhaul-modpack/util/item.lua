@@ -62,5 +62,30 @@ atom.util.item = {
         data.raw.item[sourceName] = nil
         data.raw.fluid[sourceName] = nil
         data.raw.capsule[sourceName] = nil
+    end,
+
+    --- Returns the names of all science packs: every item that is accepted by a lab or needed by a technology.
+    --- Up to Factorio 2.0 these had to be "tool" prototypes and were therefore never part of data.raw.item.
+    --- Since 2.1 science packs are plain items (vanilla and most mods converted theirs). Code that walks data.raw.item
+    --- uses this set to keep treating science packs the way it did before.
+    --- @return table<string, boolean> A set of item names
+    getSciencePacks = function()
+        local result = {}
+        for _, lab in pairs(data.raw.lab) do
+            for _, input in pairs(lab.inputs or {}) do
+                result[input] = true
+            end
+        end
+        for _, technology in pairs(data.raw.technology) do
+            if technology.unit and technology.unit.ingredients then
+                for _, ingredient in pairs(technology.unit.ingredients) do
+                    local name = ingredient[1] or ingredient.name
+                    if name then
+                        result[name] = true
+                    end
+                end
+            end
+        end
+        return result
     end
 }

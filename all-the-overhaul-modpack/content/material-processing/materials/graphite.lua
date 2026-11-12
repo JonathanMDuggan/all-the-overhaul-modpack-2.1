@@ -24,7 +24,7 @@ local dustToPlateRecipe = atom.util.Recipe({
         config.icons.plate,
         atom.util.icon.createSmallIcon(config.icons.dust),
     },
-    category = "smelting",
+    categories = { "smelting" },
     energy_required = 9.6,
     ingredients = {
         { type = "item", name = config.itemNames.dust, amount = 12 },

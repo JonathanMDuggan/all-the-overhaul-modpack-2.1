@@ -19,9 +19,9 @@ copperToGold.icons = {
 }
 copperToGold.results = {
     { type = "item", name = atom.processing.materials.gold.itemNames.dust, amount = 1 },
-    { type = "item", name = atom.processing.materials.nickel.itemNames.ore, amount = 1, probability = 0.125 },
-    { type = "item", name = atom.processing.materials.silver.itemNames.ore, amount = 1, probability = 0.1 },
-    { type = "item", name = "platinum-powder", amount = 1, probability = 0.02 },
+    { type = "item", name = atom.processing.materials.nickel.itemNames.ore, amount = 1, independent_probability = 0.125 },
+    { type = "item", name = atom.processing.materials.silver.itemNames.ore, amount = 1, independent_probability = 0.1 },
+    { type = "item", name = "platinum-powder", amount = 1, independent_probability = 0.02 },
     data.raw.fluid["depleted-acid"] and { type = "fluid", name = "depleted-acid", amount = 3 } or nil
 }
 copperToGold.energy_required = 1

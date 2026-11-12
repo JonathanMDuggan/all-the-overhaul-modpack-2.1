@@ -13,7 +13,7 @@ data.raw["pipe-to-ground"]["pipe-to-ground"].collision_mask = data.raw["pipe-to-
 -- Fix stone brick recipe
 local stone_brick = data.raw.recipe["stone-brick"]
 if stone_brick then
-    stone_brick.category = "smelting"
+    stone_brick.categories = { "smelting" }
     stone_brick.energy_required = 16
     stone_brick.enabled = true
     stone_brick.allow_productivity = true

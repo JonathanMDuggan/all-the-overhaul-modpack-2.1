@@ -127,7 +127,7 @@ local targetedTantalite = atom.util.Recipe("atom-tantalite-slurry").clone("atom-
 targetedTantalite.assign({ 
     results = {
         { type = "item", name = tantalumConfig.itemNames.pure, amount_min = 3, amount_max = 5 },
-        { type = "item", name = niobiumConfig.itemNames.pure, amount = 1, probability = 0.5 }
+        { type = "item", name = niobiumConfig.itemNames.pure, amount = 1, independent_probability = 0.5 }
     }, 
     main_product = tantalumConfig.itemNames.pure,
     localised_name = {"recipe-name.atom-targeted-tantalite-slurry"}
@@ -138,7 +138,7 @@ local targetedNiobium = atom.util.Recipe("atom-tantalite-slurry").clone("atom-ta
 targetedNiobium.assign({ 
     results = {
         { type = "item", name = niobiumConfig.itemNames.pure, amount_min = 3, amount_max = 5 },
-        { type = "item", name = tantalumConfig.itemNames.pure, amount = 1, probability = 0.5 }
+        { type = "item", name = tantalumConfig.itemNames.pure, amount = 1, independent_probability = 0.5 }
     }, 
     main_product = niobiumConfig.itemNames.pure,
     localised_name = {"recipe-name.atom-targeted-niobium-slurry"}

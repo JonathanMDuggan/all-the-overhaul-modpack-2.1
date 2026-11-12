@@ -320,13 +320,13 @@ data:extend({
         fluid_box = {
             volume = 150,
             pipe_covers = bob_pipecoverspictures("brass"),
+            -- Factorio 2.1: hide_connection_info moved from the fluid box to each pipe connection
             pipe_connections = {
-                { direction = defines.direction.north, position = { 0, 0 } },
-                { direction = defines.direction.east,  position = { 0, 0 } },
-                { direction = defines.direction.south, position = { 0, 0 } },
-                { direction = defines.direction.west,  position = { 0, 0 } }
-            },
-            hide_connection_info = true
+                { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
+                { direction = defines.direction.east,  position = { 0, 0 }, hide_connection_info = true },
+                { direction = defines.direction.south, position = { 0, 0 }, hide_connection_info = true },
+                { direction = defines.direction.west,  position = { 0, 0 }, hide_connection_info = true }
+            }
         },
         pictures = bob_pipepictures("brass"),
         working_sound = {
@@ -365,15 +365,15 @@ data:extend({
             volume = 150,
             pipe_covers = bob_pipecoverspictures("brass"),
             pipe_connections = {
-                { direction = defines.direction.north, position = { 0, 0 } },
+                { direction = defines.direction.north, position = { 0, 0 }, hide_connection_info = true },
                 {
                     connection_type = "underground",
                     direction = defines.direction.south,
                     position = { 0, 0 },
-                    max_underground_distance = 60
+                    max_underground_distance = 60,
+                    hide_connection_info = true
                 }
-            },
-            hide_connection_info = true
+            }
         },
         underground_sprite = {
             filename = "__core__/graphics/arrows/underground-lines.png",

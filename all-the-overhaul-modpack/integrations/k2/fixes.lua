@@ -8,7 +8,7 @@ data:extend({
     {
         type = "recipe",
         name = "kr-coke",
-        category = "smelting",
+        categories = { "smelting" },
         energy_required = 16,
         enabled = false,
         allow_productivity = true,

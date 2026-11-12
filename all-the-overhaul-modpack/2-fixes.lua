@@ -16,7 +16,7 @@ electronic_components.replaceIngredient("BOBMD-electronic-components", 2)
 local electronic_components_lithium = Recipe("kr-electronic-components-with-lithium")
 electronic_components_lithium.replaceIngredient("silicon-wafer", 3)
 electronic_components_lithium.removeIngredient("kr-nitric-acid")
-electronic_components_lithium.assign({ category = "crafting" })
+electronic_components_lithium.assign({ categories = { "crafting" } })
 
 local efficient_fabrication = atom.util.Technology("se-kr-efficient-fabrication")
 efficient_fabrication.setPrerequisites({ "se-energy-science-pack-1" })
@@ -175,8 +175,8 @@ Recipe("advanced-circuit-in-laser-mill").replaceIngredient("kr-electronic-compon
 Recipe("phenolic-board-stone").replaceResult("phenolic-board", 2)
 
 -- Pollution filter
-data.raw["recipe"]["kr-pollution-filter"].category = "crafting"
-data.raw["recipe"]["kr-restore-used-pollution-filter"].category = "crafting-with-fluid"
+data.raw["recipe"]["kr-pollution-filter"].categories = { "crafting" }
+data.raw["recipe"]["kr-restore-used-pollution-filter"].categories = { "crafting-with-fluid" }
 
 -- Pump speed kind of break old games so we choose something inbetween
 data.raw["pump"]["pump"].pumping_speed = 80
@@ -218,7 +218,7 @@ steam_power.prototype.ignore_tech_cost_multiplier = false
 
 local manganese_smelting = data.raw.technology["manganese-smelting"]
 manganese_smelting.unit = nil
-manganese_smelting.research_trigger = { type = "mine-entity", entity = "manganese-ore" }
+manganese_smelting.research_trigger = { type = "mine-entity", entities = { "manganese-ore" } }
 
 local valves = Technology("valves")
 valves.removePrerequisite("logistic-science-pack")

@@ -1,6 +1,6 @@
 -- Recipes
 
-local Recipe = require('__jalm__/stdlib/data/recipe')
+local Recipe = require("__all-the-overhaul-modpack__/util/legacy-recipe")
 
 local mk1Recipe = atom.util.Recipe(data.raw["recipe"]["centrifuge"])
 mk1Recipe.replaceIngredient("processing-unit", "advanced-circuit")

@@ -1,4 +1,4 @@
-local Recipe = require('__jalm__/stdlib/data/recipe')
+local Recipe = require("__all-the-overhaul-modpack__/util/legacy-recipe")
 
 -- Fix Portable fusion reactor recipe
 atom.util.Recipe("fission-reactor-equipment").removeIngredient("se-fusion-test-data")

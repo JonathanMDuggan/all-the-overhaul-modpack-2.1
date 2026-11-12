@@ -82,7 +82,7 @@ lds.ingredients = {
     { type = "fluid", name = "helium", amount = 20 }
 }
 lds.results[1].amount = 2
-lds.category = "laser-milling-exclusive"
+lds.categories = { "laser-milling-exclusive" }
 atom.util.Recipe(lds).allowProductivity()
 
 -- Energy crystal usage
@@ -116,7 +116,7 @@ atom.util.item.removeByName("fi_hcp") --This appears to already not exist.
 
 -- Adjust T-Lab recipe
 table.assign(data.raw.recipe["fu_lab"], {
-    category = "space-manufacturing",
+    categories = { "space-manufacturing" },
     ingredients = {
         { type = "item", name = "kr-singularity-lab", amount = 2 },
         { type = "item", name = "kr-energy-control-unit", amount = 50 },
@@ -158,7 +158,7 @@ data:extend({
     {
         type = "recipe",
         name = "248k-krastorio2-tritium",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 1,
         ingredients = { { type = "fluid", name = "fu_tritium", amount = 3 } },
         results = {{type="item", name="kr-tritium", amount=1}},

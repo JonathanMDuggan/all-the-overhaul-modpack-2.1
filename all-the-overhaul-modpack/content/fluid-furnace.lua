@@ -13,7 +13,8 @@ table.assign(entity, {
                 { flow_direction = "input-output", direction = defines.direction.west, position = { -0.5, 0.5 } },
             },
             pipe_covers = pipecoverspictures(),
-            pipe_picture = assembler2pipepictures(),
+            -- Factorio 2.1: assembler2pipepictures() is no longer a global function but a table of a base module
+            pipe_picture = table.deepcopy(require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures),
             production_type = "input-output",
         },
         smoke = {

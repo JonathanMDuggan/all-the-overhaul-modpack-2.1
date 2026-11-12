@@ -28,18 +28,18 @@ local enrichedToIngotRecipe = create.enrichedToIngotRecipe()
 
 oreToPlateRecipe.prototype.results = {
     { type = "item", name = config.itemNames.ingot, amount = 2 },
-    { type = "item", name = config.itemNames.ingot, amount = 1, probability = 0.50 },
+    { type = "item", name = config.itemNames.ingot, amount = 1, independent_probability = 0.50 },
 }
 oreToPlateRecipe.prototype.hide_from_signal_gui = false
 
 dustToPlateRecipe.prototype.results = {
     { type = "item", name = config.itemNames.ingot, amount = 5 },
-    { type = "item", name = config.itemNames.ingot, amount = 1, probability = 0.50 },
+    { type = "item", name = config.itemNames.ingot, amount = 1, independent_probability = 0.50 },
 }
 
 enrichedToIngotRecipe.prototype.results = {
     { type = "item", name = config.itemNames.ingot, amount = 10 },
-    { type = "item", name = config.itemNames.ingot, amount = 1, probability = 0.50 },
+    { type = "item", name = config.itemNames.ingot, amount = 1, independent_probability = 0.50 },
 }
 
 atom.util.applyAll({

@@ -15,10 +15,10 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         dustToIngot = {
-            { type = "item", name = "sulfur", amount = 1, probability = 0.4 }
+            { type = "item", name = "sulfur", amount = 1, independent_probability = 0.4 }
         },
         dustToEnriched = {
-            { type = "item", name = "sulfur", amount = 1, probability = 0.16 }
+            { type = "item", name = "sulfur", amount = 1, independent_probability = 0.16 }
         }
     },
     unlockedBy = {
@@ -38,7 +38,7 @@ local oreToDustRecipe = Recipe({
         config.icons.dust,
         atom.util.icon.createSmallIcon(atom.processing.materials.rareMetals.icons.ore),
     },
-    category = "core-fragment-processing",
+    categories = { "core-fragment-processing" },
     energy_required = 9.6,
     ingredients = {
         { type = "item", name = config.itemNames.ore, amount = 6 },

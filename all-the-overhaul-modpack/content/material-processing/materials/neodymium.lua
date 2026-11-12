@@ -29,7 +29,7 @@ local rareToDustRecipe = Recipe({
         config.icons.dust,
         atom.util.icon.createSmallIcon(atom.processing.materials.rareMetals.icons.dust),
     },
-    category = "chemistry",
+    categories = { "chemistry" },
     energy_required = 4.8,
     ingredients = {
         { type = "item", name = atom.processing.materials.rareMetals.itemNames.dust, amount = 3 },

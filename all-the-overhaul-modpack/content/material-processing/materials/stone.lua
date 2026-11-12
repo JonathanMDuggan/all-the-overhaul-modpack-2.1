@@ -21,7 +21,7 @@ local dustToSandRecipe = Recipe({
     name = "atom-" .. config.name .. "-sand",
     localised_name = { "item-name." .. config.itemNames.sand },
     icons = { config.icons.sand },
-    category = "mashering",
+    categories = { "mashering" },
     energy_required = 3.2,
     ingredients = {
         { type = "item", name = config.itemNames.dust, amount = 4 }

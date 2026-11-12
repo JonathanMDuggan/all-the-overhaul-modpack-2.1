@@ -1,4 +1,4 @@
-local Recipe = require('__jalm__/stdlib/data/recipe')
+local Recipe = require("__all-the-overhaul-modpack__/util/legacy-recipe")
 
 -- Entities
 

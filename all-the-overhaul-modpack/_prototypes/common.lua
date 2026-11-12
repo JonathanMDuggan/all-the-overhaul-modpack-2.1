@@ -61,14 +61,27 @@ local fluid_boxes = {
     }
 }
 
-local crafting_categories = {
+-- A crafting machine that lists an unknown recipe category prevents the game from loading.
+-- Factorio 2.1 removed "basic-crafting" from vanilla, so it is only kept if another mod still provides it.
+-- (atom.util is not loaded yet at this point.)
+local function existingRecipeCategories(categories)
+    local result = {}
+    for _, category in pairs(categories) do
+        if data.raw["recipe-category"][category] then
+            table.insert(result, category)
+        end
+    end
+    return result
+end
+
+local crafting_categories = existingRecipeCategories({
     "basic-crafting",
     "crafting",
     "advanced-crafting",
     "crafting-with-fluid",
     "kr-smelting-crafting",
     "fi_crafting_category",
-}
+})
 
 data.raw["assembling-machine"]["fi_crafter"].fluid_boxes = fluid_boxes
 data.raw["assembling-machine"]["gr_crafter"].fluid_boxes = fluid_boxes

@@ -18,16 +18,16 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         oreToPlate = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.05 },
-            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.05 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.05 },
+            { type = "item", name = "bismuth-plate", amount = 1, independent_probability = 0.05 }
         },
         dustToPlate = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.125 },
-            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.125 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.125 },
+            { type = "item", name = "bismuth-plate", amount = 1, independent_probability = 0.125 }
         },
         dustToIngot = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.33 },
-            { type = "item", name = "bismuth-ore", amount = 1, probability = 0.25 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.33 },
+            { type = "item", name = "bismuth-ore", amount = 1, independent_probability = 0.25 }
         }
     }
 })

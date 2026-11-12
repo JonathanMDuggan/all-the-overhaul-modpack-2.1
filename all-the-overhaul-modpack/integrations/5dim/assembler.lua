@@ -6,7 +6,7 @@ entity03.next_upgrade = "5d-assembling-machine-04"
 
 -- Recipes
 
-local Recipe = require('__jalm__/stdlib/data/recipe')
+local Recipe = require("__all-the-overhaul-modpack__/util/legacy-recipe")
 
 local recipe04 = Recipe("5d-assembling-machine-04")
 local recipe05 = Recipe("5d-assembling-machine-05")

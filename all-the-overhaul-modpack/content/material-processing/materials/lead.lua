@@ -21,24 +21,24 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         oreToPlate = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.25 },
-            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.25 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.25 },
+            { type = "item", name = "bismuth-plate", amount = 1, independent_probability = 0.25 }
         },
         dustToPlate = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.625 },
-            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.125 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.625 },
+            { type = "item", name = "bismuth-plate", amount = 1, independent_probability = 0.125 }
         },
         dustToIngot = {
             { type = "item", name = "silver-ore", amount = 1 },
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.66 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.66 }
         },
         dustToEnriched = {
             { type = "item", name = "silver-ore", amount = 2 },
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.5 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.5 }
         },
         pureToEnriched = {
             { type = "item", name = "silver-ore", amount = 2 },
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.5 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.5 }
         }
     }
 })

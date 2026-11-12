@@ -1,6 +1,6 @@
 -- Recipes
 
-local Recipe = require('__jalm__/stdlib/data/recipe')
+local Recipe = require("__all-the-overhaul-modpack__/util/legacy-recipe")
 
 -- 02
 Recipe("5d-radar-02"):replace_ingredient("electronic-circuit", { "solder", 5 })

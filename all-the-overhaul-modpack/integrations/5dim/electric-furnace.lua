@@ -5,7 +5,7 @@ data.raw["assembling-machine"]["5d-electric-furnace-02"].crafting_speed = 3
 
 -- Recipes
 
-local Recipe = require('__jalm__/stdlib/data/recipe')
+local Recipe = require("__all-the-overhaul-modpack__/util/legacy-recipe")
 
 local recipe02 = Recipe("5d-electric-furnace-02")
 local recipe03 = Recipe("5d-electric-furnace-03")

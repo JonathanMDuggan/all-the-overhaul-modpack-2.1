@@ -22,13 +22,13 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         dustToIngot = {
-            { type = "item", name = "alumina", amount = 1, probability = 0.26 }
+            { type = "item", name = "alumina", amount = 1, independent_probability = 0.26 }
         },
         dustToEnriched = {
-            { type = "item", name = "alumina", amount = 1, probability = 0.26 }
+            { type = "item", name = "alumina", amount = 1, independent_probability = 0.26 }
         },
         dustToPure = {
-            { type = "item", name = "alumina", amount = 1, probability = 0.26 }
+            { type = "item", name = "alumina", amount = 1, independent_probability = 0.26 }
         }
     },
 })
@@ -41,14 +41,14 @@ local oreToAluminaRecipe = Recipe({
         config.icons.alumina,
         atom.util.icon.createSmallIcon(config.icons.ore),
     },
-    category = "smelting",
+    categories = { "smelting" },
     energy_required = 3.2,
     ingredients = {
         { type = "item", name = config.itemNames.ore, amount = 2 }
     },
     results = {
         { type = "item", name = config.itemNames.alumina, amount = 1 },
-        { type = "item", name = "silica", amount = 1, probability = 0.05 }
+        { type = "item", name = "silica", amount = 1, independent_probability = 0.05 }
     },
     main_product = config.itemNames.alumina,
     enabled = config.enableAtStart or false
@@ -62,7 +62,7 @@ local aluminaToPlateRecipe = Recipe({
         config.icons.plate,
         atom.util.icon.createSmallIcon(config.icons.alumina),
     },
-    category = "smelting",
+    categories = { "smelting" },
     energy_required = 19.2,
     ingredients = {
         { type = "item", name = config.itemNames.alumina, amount = 6 }
@@ -80,14 +80,14 @@ local dustToAluminaRecipe = Recipe({
         config.icons.alumina,
         atom.util.icon.createSmallIcon(config.icons.dust),
     },
-    category = "smelting",
+    categories = { "smelting" },
     energy_required = 3.2,
     ingredients = {
         { type = "item", name = config.itemNames.dust, amount = 3 }
     },
     results = {
         { type = "item", name = config.itemNames.alumina, amount = 1 },
-        { type = "item", name = "silica", amount = 1, probability = 0.0167 }
+        { type = "item", name = "silica", amount = 1, independent_probability = 0.0167 }
     },
     main_product = config.itemNames.alumina,
     enabled = false

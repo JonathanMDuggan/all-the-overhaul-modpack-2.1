@@ -116,6 +116,33 @@ atom.util.recipe = {
         if recipe then
             recipe.hidden = true
         end
+    end,
+
+    --- Creates a recipe category unless another mod already provides it.
+    --- Factorio 2.1 removed several vanilla categories (e.g. "electronics") that ATOM builds on.
+    --- @param name string The name of the recipe category
+    ensureCategory = function(name)
+        if not data.raw["recipe-category"][name] then
+            data:extend({ { type = "recipe-category", name = name } })
+        end
+    end,
+
+    --- Filters a list of recipe category names down to the ones that exist.
+    --- A crafting machine that lists an unknown recipe category prevents the game from loading. With Factorio 2.1
+    --- vanilla and other mods replaced combined categories (e.g. "basic-crafting", "electronics") with multiple
+    --- categories per recipe, so lists written for 2.0 may name categories that are gone.
+    --- @param categories table A list of recipe category names
+    --- @return table A new list with the existing categories in their original order
+    existingCategories = function(categories)
+        local result = {}
+        for _, category in pairs(categories) do
+            if data.raw["recipe-category"][category] then
+                table.insert(result, category)
+            else
+                atom.util.log.info("Skipping unknown recipe category: " .. category)
+            end
+        end
+        return result
     end
 }
 
@@ -275,6 +302,13 @@ function atom.util.Recipe(value)
             if recipe.results then
                 table(recipe, amount)
             end
+        end,
+
+        --- Sets the categories of the recipe (which machines can craft it), replacing the existing ones.
+        --- Since Factorio 2.1 a recipe has a list of categories instead of a single category.
+        --- @param categories table A list of recipe category names
+        setCategories = function(categories)
+            recipe.categories = categories
         end,
 
         -- Allows productivity modules to be used for a recipe

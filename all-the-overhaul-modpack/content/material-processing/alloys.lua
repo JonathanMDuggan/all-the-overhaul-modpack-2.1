@@ -13,7 +13,7 @@ function createAlloy(mainMetal, secondaryMetal)
             atom.util.icon.createSmallIcon(mainMetal.icons.ingot, "top-left"),
             atom.util.icon.createSmallIcon(secondaryMetal.icons.ingot, "top-right")
         },
-        category = "el_arc_furnace_category",
+        categories = { "el_arc_furnace_category" },
         energy_required = 16,
         ingredients = {
             { type = "item", name = mainMetal.itemNames.ingot, amount = 4 },

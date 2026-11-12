@@ -19,7 +19,7 @@ silverLandfill.unlockedByTechnology("se-recycling-facility")
 silverLandfill.apply()
 
 -- Allow recipes in burner chemical plant
-data.raw.recipe["sulfuric-acid"].category = "basic-chemistry"
+data.raw.recipe["sulfuric-acid"].categories = { "basic-chemistry" }
 
 
 -- Technologies

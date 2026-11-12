@@ -7,7 +7,7 @@ local cleanAir0 = atom.util.Recipe({
     name = "bi-purified-air-0",
     icon = "__Bio_Industries_2__/graphics/icons/clean-air.png",
     icon_size = 64,
-    category = "clean-air",
+    categories = { "clean-air" },
     subgroup = "bio-bio-gardens-fluid",
     order = "zzz-clean-air",
     enabled = false,
@@ -18,7 +18,7 @@ local cleanAir0 = atom.util.Recipe({
     ingredients = {
         { type = "fluid", name = "water", amount = 50 },
     },
-    results = { { type = "item", name = "bi-purified-air", amount = 1, probability = 0 } },
+    results = { { type = "item", name = "bi-purified-air", amount = 1, independent_probability = 0 } },
     main_product = ""
 })
 cleanAir0.apply()

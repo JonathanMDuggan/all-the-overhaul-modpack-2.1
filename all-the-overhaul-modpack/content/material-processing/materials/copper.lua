@@ -22,24 +22,24 @@ local config = atom.processing.util.prepareConfig({
     },
     additionalResults = {
         oreToPlate = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.1 },
-            { type = "item", name = "cobaltite-ore", amount = 1, probability = 0.5 },
-            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.05 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.1 },
+            { type = "item", name = "cobaltite-ore", amount = 1, independent_probability = 0.5 },
+            { type = "item", name = "bismuth-plate", amount = 1, independent_probability = 0.05 }
         },
         dustToPlate = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.25 },
-            { type = "item", name = "cobaltite-ore", amount = 1, probability = 0.1 },
-            { type = "item", name = "bismuth-plate", amount = 1, probability = 0.3125 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.25 },
+            { type = "item", name = "cobaltite-ore", amount = 1, independent_probability = 0.1 },
+            { type = "item", name = "bismuth-plate", amount = 1, independent_probability = 0.3125 }
         },
         dustToIngot = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.33 },
-            { type = "item", name = "bismuth-ore", amount = 1, probability = 0.25 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.33 },
+            { type = "item", name = "bismuth-ore", amount = 1, independent_probability = 0.25 }
         },
         dustToEnriched = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.5 },
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.5 },
         },
         pureToEnriched = {
-            { type = "item", name = "silver-ore", amount = 1, probability = 0.5 }
+            { type = "item", name = "silver-ore", amount = 1, independent_probability = 0.5 }
         }
     },
     unlockedBy = {

@@ -11,6 +11,9 @@ local function subgroup_table_contains_name(table, name)
     return table[name] ~= nil
 end
 
+-- See SetGroupSubOrder
+local sciencePacks = atom.util.item.getSciencePacks()
+
 --smelting
 
 ---Checks if SortDirectlyTable contains the recipe.
@@ -81,7 +84,10 @@ local function SetGroupSubOrder(name, subgroup, group, Iorder, Sorder)
     if Iorder then
         data.raw.recipe[name].order = Iorder
     end
-    if data.raw.item[name] then
+    -- Quirk kept from Factorio 2.0: science packs were "tool" prototypes and never matched data.raw.item here, so
+    -- only their recipes got sorted and the items kept the subgroup and order of their own mod. They are plain items
+    -- since 2.1 and have to be skipped explicitly to stay where they were.
+    if data.raw.item[name] and not sciencePacks[name] then
         data.raw.item[name].group = group
         data.raw.item[name].subgroup = subgroup
         if Iorder then

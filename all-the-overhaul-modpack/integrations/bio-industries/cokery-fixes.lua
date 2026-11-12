@@ -1,20 +1,20 @@
 -- Adjust recipes for usage in cokery
 local cokeRecipe = atom.util.Recipe("kr-coke")
-cokeRecipe.prototype.category = "biofarm-mod-smelting"
+cokeRecipe.prototype.categories = { "biofarm-mod-smelting" }
 cokeRecipe.prototype.allow_as_intermediate = false
 cokeRecipe.prototype.allow_intermediates = false
 cokeRecipe.prototype.subgroup = "coal"
 cokeRecipe.allowProductivity()
 
 local phenolRecipe = atom.util.Recipe("phenol")
-phenolRecipe.prototype.category = "biofarm-mod-smelting"
+phenolRecipe.prototype.categories = { "biofarm-mod-smelting" }
 phenolRecipe.prototype.allow_as_intermediate = false
 phenolRecipe.prototype.allow_intermediates = false
 phenolRecipe.prototype.subgroup = "coal"
 phenolRecipe.allowProductivity()
 
-data.raw.recipe["bi-ash-1"].category = "smelting"
-data.raw.recipe["bi-ash-2"].category = "smelting"
+data.raw.recipe["bi-ash-1"].categories = { "smelting" }
+data.raw.recipe["bi-ash-2"].categories = { "smelting" }
 
 local woodpulpRecipe = atom.util.Recipe("bi-woodpulp")
 woodpulpRecipe.prototype.energy_required = 1

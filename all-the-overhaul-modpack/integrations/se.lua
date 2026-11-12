@@ -29,6 +29,9 @@ local function resourceYield(factor)
         if (result.probability <= 0) then
             result.probability = nil
         end
+        -- Factorio 2.1: products use independent_probability instead of probability
+        result.independent_probability = result.probability
+        result.probability = nil
         return result
     end
 
@@ -86,7 +89,7 @@ data.raw.recipe["se-core-fragment-omni"].results = omniResults
 -- Results per 1 scrap
 data.raw.recipe["se-scrap-hard-recycling"].results = table.assign(
         resourceYield(0.2), {
-            { amount = 1, probability = 0.32, name = "heavy-oil", type = "fluid" }
+            { amount = 1, independent_probability = 0.32, name = "heavy-oil", type = "fluid" }
         })
 
 -- Remove the alternative singularity card
