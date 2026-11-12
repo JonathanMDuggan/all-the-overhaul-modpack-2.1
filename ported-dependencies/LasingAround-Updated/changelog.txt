@@ -1,0 +1,170 @@
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2026-11-12
+  Changes:
+    - Unofficial port to Factorio 2.1.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.14
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 2.0.13
+Date: 2026-06-03
+  Changes:
+    - Added an additional fluid connection to the Lasermill (Morganite)
+    - Fix BZGold tech recipe name (Morganite)
+    - Changed air scrubbing oil processing to use Filtered Oil if exists (Morganite)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.12
+Date: 2026-03-15
+  Changes:
+    - Updated compat to latest version of 248k-Redux
+---------------------------------------------------------------------------------------------------
+Version: 2.0.11
+Date: 2025-11-17
+  Changes:
+    - Changed lasermill productivity to 20%
+  Bugfixes:
+    - Fixed crash when using bzgold and not SE or TTH
+---------------------------------------------------------------------------------------------------
+Version: 2.0.10
+Date: 2025-10-20
+  Bugfixes:
+    - Fixed path references when BZ 2.0 mod forks are used
+---------------------------------------------------------------------------------------------------
+Version: 2.0.9
+Date: 2025-10-19
+  Changes:
+    - Added dependency checks for BZ 2.0 mod forks
+  Bugfixes:
+    - Fixed size of tracker item picture
+---------------------------------------------------------------------------------------------------
+Version: 2.0.8
+Date: 2025-10-15
+  Changes:
+    - Fix Laser Mill not having module slots (Cackling Fiend)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 2025-10-14
+  Changes:
+    - Fix Laser Mill not having base productivity (Cackling Fiend)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 2025-10-11
+  Bugfixes:
+    - Updated 248K compatibility to use 248k-Redux
+    - Fixed error message for missing prototypes
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 2025-10-11
+  Changes:
+    - Changed name to Lasing Around Legacy
+    - Added logging for missing recipes.
+  Bugfixes:
+    - Lots of Krastorio 2 fixes
+    - Fixes to some space exploration references
+    - Fixed locale for laser recipes
+      - This required the use of the Factorio Lib mod. If the mod portal doesn't auto download it for you, you will need to download and enable it!!!
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2025-10-07
+  Changes:
+    - Fixed LuaLS require error
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2025-10-07
+  Changes:
+    - More K2 compatibility fixes
+    - Fixes to lasermill prototype definition
+      - Images and fluidboxes
+    - Fixed catalyst recipes using old catalyst definition
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2025-09-30
+  Bugfixes:
+    - Fixed crash when Krastorio2 container technology was disabled
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025-09-30
+  Bugfixes:
+    - Fixed Fluids Must Flow & Flow Control incompatibility
+    - Fixed conditional crash when tracker was enabled and and skyseeker wasn't?
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025-09-29
+  Changes:
+    - Updated to 2.0.
+      - Lots of fixes and migrations. See github for blames
+      - Has been tested with and without K2 and SE
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+  Compatibility:
+    - Corrected a reference to a removed icon for compatibility with Lunar Landings.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Balancing:
+    - (LL) CO2 lasers need oxygen and solid fuel, instead of an absurd-to-import-to-the-moon amount of petroleum gas.
+    - (LL) Moon rock processing gives 2 -> 5 helium. Helium venting is unlocked when researching either method of getting helium.
+    - (LL) Polariton Laser crafts in a batch of 10 -> 20 and costs less astroflux per product.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Compatibility:
+    - Support for Lunar Landings added.
+  Features:
+    - Spectroscope recipe will never have the baffling placeholder ingredient of a pipe if no suitable glass item is found. Yes, this is a feature.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Bugfixes:
+    - (nickel) Alternate recipes for valve and gyroscope using micron-tolerance components now correctly accept productivity modules.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Compatibility:
+    - Added support for Icon Badges
+    - Laser mill recipe generation will now attempt to not overlap laser icon with Icon Badges. If the laser icon position is unspecified, and the IB icon position is top-left, it will now default to top right. For some recipes, this may still need manual adjustment.
+    - Icon Badges is now an optional dependency to solidify the load order.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Locale:
+    - Added Spanish locale by Rawkius.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+  Changes:
+    - (bzgas, SE) Renamed gas-to-methane alternate recipes from "methane reforming" to "methane distillation" for more accuracy.
+    - Replaced all references to "microtolerance" with "micron-tolerance." This is both a more widely used term and not the name of an engineering firm.
+  Balancing:
+    - Alternate gas reforming and methane distillation recipes can now use productivity modules (but only for helium.)
+  Locale:
+    - Consolidated all "productivity modules only boost the yield of helium" descriptions into a single locale key.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Changes:
+    - Renamed tech folder to technology.
+  Compatibility:
+    - (bzgas) Added versions of the gas-to-hydrogen and gas-to-methane recipes which yield helium.
+  Bugfixes:
+    - (bzgas) Fixed formaldehyde product advanced natural gas processing having a higher catalyst_amount than the actual amount of formaldehyde produced.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Compatibility:
+    - (K2) Added trackers to K2 lategame turrets and intergalactic transceiver.
+    - (K2) Added CO2 laser to laser artillery and advanced tech card.
+    - (K2) Added spectroscope to matter stabilizer.
+  Balancing:
+    - (K2) Helium cost of making iron gears in the laser mill is now always 1 per 2 gears regardless of whether or not K2 has bulkified the recipe.
+    - Helium yield from filtering is now dynamic based on mod configuration and ranges 10-16 per 50 oil. You will now get a bit more helium the more laser mill recipes you have enabled in mod settings. BZ noble metals reduces the benefit of enabling circuit recipes in the laser mill because the processing unit rework craters the demand for green circuits.
+    - Helium balancing is the thing I need the most feedback about. In general I want it to be possible to use the laser mill for some discretionary recipes from the moment it is unlocked, but to never be able to use it in every possible location without max prodmods and sacrificing spectroscopes. The strong effect of unlocking better modules and the vast number of possible mod combinations make this... complicated.
+  Changes:
+    - Renamed items folder to icons, like every other mod.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.

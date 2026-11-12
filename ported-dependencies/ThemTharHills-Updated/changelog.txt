@@ -1,0 +1,144 @@
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2026-11-12
+  Changes:
+    - Unofficial port to Factorio 2.1.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.12
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 2.0.11
+Date: 2026-06-03
+  Changes:
+    - Fixed Advanced Flow Controller recipe ingredient name (Morganite)
+    - Hide inaccessible recipe for blank data cards instead of removing pre-reqs (Morganite)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.10
+Date: 2026-03-15
+  Changes:
+    - Updated compat to latest version of 248k-Redux
+---------------------------------------------------------------------------------------------------
+Version: 2.0.9
+Date: 2025-11-13
+  Changes:
+    - Fixed deadlock crash when another mod improperly overwrites it
+---------------------------------------------------------------------------------------------------
+Version: 2.0.8
+Date: 2025-11-01
+  Changes:
+    - Fixed Matter generation recipes (Pla)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 2025-10-20
+  Bugfixes:
+    - Fixed path references when BZ 2.0 mod forks are used
+    - Fixed high res graphics not being used for some prototypes
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 2025-10-19
+  Changes:
+    - Added dependency checks for BZ 2.0 mod forks
+  Bugfixes:
+    - Fixed gold ore sprite picture size
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 2025-10-14
+  Bugfixes:
+    - Fixed Krastorio 2 naming for Hydrogen Chloride if K2 is enabled (Cackling Fiend)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2025-10-11
+  Bugfixes:
+    - Updated 248K compatibility to use 248k-Redux
+    - Fixed error message for missing prototypes
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2025-10-11
+  Changes:
+    - Corrected dependecies list
+    - Changed name to Them Thar Hills Legacy
+    - Added logging for missing recipes.
+  Bugfixes:
+    - Lots of compatbility fixes for Krastorio 2
+    - Compatibility fixes for Space Ex
+    - Fixed productivity not being usable for recipes
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2025-10-07
+  Changes:
+    - Fixed LuaLS require error
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025-10-07
+  Changes:
+    - Fixed iron stick recipe unlock timing issue
+    - Fixed catalyst recipes not using new catalyst definition
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025-09-29
+  Changes:
+    - Updated to 2.0.
+      - Lots of fixes and migrations. See github for blames
+      - Has been tested with and without K2 and SE
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Compatibility:
+    - Corrected a reference to a removed icon for compatibility with Lunar Landings.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Compatibility:
+    - Support for Lunar Landings added.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Compatibility:
+    - Fixed softlock with Freight Forwarding + Krastorio2 + BZ tungsten + BrimStuff: Removes HCl/aqua regia from gold processing, gold can now be processed in burner chemical plant. (Not needed for BZ gas without brimstuff: BZ alone does not make a distinction between recipes that can be made in burner vs. electric chem plant.)
+    - With FF + K2 + tungsten and neither brimstuff or natural gas, just removes tungsten and tungsten-derivatives from the electric chemical plant recipe. It's still needed for the oil rig and refinery.
+    - Fixed softlock with Krastorio2 and not BZ chlorine: hydrogen chloride is unlocked earlier.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Changes:
+    - Renamed saltpeter to potassium nitrate for consistency across translations.
+  Locale:
+    - Added Spanish locale by Sigmaleph.
+  Features:
+    - Added aqua regia to simplify the pipe routing in gold ore processing if you have a mod that adds hydrogen chloride. Can be disabled in startup settings if you want to avoid rebuilding your gold refining area.
+  Compatibility:
+    - Add support for Icon Badges
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Bugfixes:
+    - Fixed startup error when used with SE and not If I Had A Nickel
+    - Fixed startup error when used with SE and not Lasing Around (Absolutely baffling this one. No idea what I was thinking.)
+    - SE maintenance recipes now actually respect the setting to disable them.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+  Compatibility:
+    - (SE) Gold core fragment processing is now in the correct place in the crafting menu.
+  Features:
+    - (bzgold) Added alternate recipe for integrated circuits which uses silver instead of copper. Only applies if the integrated circuit requires both copper and gold, i.e. if you don't have a mod adding silicon.
+  Balancing:
+    - (bzgold) Advanced cables need +1 (expensive mode: +2) silver wire. +an equal amount if Brass Tacks is installed (more demand for non-circuit copper = more silver byproduct to get rid of)
+  Changes:
+    - Renamed items folder to icons, like every other mod.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Bugfixes:
+    - Fixed startup error with Deadlock stacking/crating
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Bugfixes:
+    - Changelog no longer says "initial fake release."
+    - Off to a great start with this one, I see.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.

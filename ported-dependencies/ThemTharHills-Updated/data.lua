@@ -1,0 +1,5 @@
+require("prototypes/ore")
+require("prototypes/particle")
+require("prototypes/items")
+require("prototypes/recipes")
+require("prototypes/technology")

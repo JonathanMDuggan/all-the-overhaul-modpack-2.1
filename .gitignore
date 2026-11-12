@@ -11,3 +11,5 @@ all-the-overhaul-modpack.lnk
 
 .claude/
 *-cwd
+# Black Wagons graphics are ~340 MB; the 2.1 port only changes info.json and changelog.txt (see ported-dependencies/README.md)
+ported-dependencies/DoubleWagons/

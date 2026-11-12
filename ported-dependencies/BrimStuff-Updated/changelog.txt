@@ -1,0 +1,156 @@
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2026-11-12
+  Changes:
+    - Unofficial port to Factorio 2.1.
+---------------------------------------------------------------------------------------------------
+Version: 2.0.15
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 2.0.14
+Date: 2026-06-03
+  Changes:
+    - Fixed animations for burner chem plant (Morganite)
+    - Fixed renai tech name (jwright)
+---------------------------------------------------------------------------------------------------
+Version: 2.0.13
+Date: 2026-03-15
+  Changes:
+    - Updated compat to latest version of 248k-Redux
+---------------------------------------------------------------------------------------------------
+Version: 2.0.12
+Date: 2025-11-13
+  Changes:
+    - Fixed deadlock crash when another mod improperly overwrites it
+---------------------------------------------------------------------------------------------------
+Version: 2.0.11
+Date: 2025-11-09
+  Bugfixes:
+    - Fixed crash when waste was disabled and no other mods were enabled
+    - Fixed Renai compat naming
+---------------------------------------------------------------------------------------------------
+Version: 2.0.10
+Date: 2025-11-03
+  Bugfixes:
+    - Fixed crash. I messed up formatting
+---------------------------------------------------------------------------------------------------
+Version: 2.0.9
+Date: 2025-11-02
+  Bugfixes:
+    - Fix pipe connections for Basic Chemical Plant
+    - Fix crash when prereqs were missing for Electric Chemical Plant
+---------------------------------------------------------------------------------------------------
+Version: 2.0.8
+Date: 2025-11-01
+  Changes:
+    - Fixed Toluene recipe names in English
+---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 2025-10-20
+  Bugfixes:
+    - Fixed path references when BZ 2.0 mod forks are used
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 2025-10-19
+  Changes:
+    - Added dependency checks for BZ 2.0 mod forks
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 2025-10-12
+  Bugfixes:
+    - Fixed crash when waste was disabled
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2025-10-11
+  Bugfixes:
+    - Updated 248K compatibility to use 248k-Redux
+    - Fixed error message for missing prototypes
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2025-10-11
+  Changes:
+    - Added logging for missing recipes.
+    - Changed name to Brim Stuff Legacy
+  Bugfixes:
+    - Lots of Krastorio 2 fixes
+    - Space Ex migration fixes
+    - Fixed productivity not being usable for recipes
+    - Fixed crass with bz gas when waste was disabled
+    - Fixed locale for certain recipes
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2025-09-30
+  Changes:
+    - Fixed milestone compatibility
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025-09-30
+  Bugfixes:
+    - Fixed softlock with Iron Sticks not being unlocked. How did this even work in the 1.1 mod??
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025-09-29
+  Changes:
+    - Updated to 2.0.
+      - Lots of fixes and migrations. See github for blames
+      - Has been tested with and without K2 and SE
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Bugfixes:
+    - (LL, !brass) Liquid rocket fuel no longer costs rubber or gaskets.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Bugfixes:
+    - Plastic-with-toluene can use productivity modules. For real this time.
+    - Burner chemical plant will no longer buffer excessive fluid outputs.
+  Compatibility:
+    - Support for Lunar Landings added.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Changes:
+    - Advanced Polymer Synthesis recipes can use productivity modules.
+  Bugfixes:
+    - Fixed potassium nitrate having a broken locale key.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Bugfixes:
+    - Fixed startup error with Them Thar Hills when greenhouses are disabled.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Changes:
+    - Renamed saltpeter to potassium nitrate for consistency across translations.
+  Compatibility:
+    - Add support for Icon Badges
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+  Locale:
+    - Added Spanish locale by Rawkius
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Features:
+    - Added advanced polymer synthesis technology, unlocking alternate recipes for rubber and plastic which use toluene to boost efficiency.
+  Changes:
+    - (Deadlock) Toluene can now be stacked and crated.
+    - Renamed tech folder to technology.
+  Locale:
+    - Added description to pollution nodule indicating it can be shipped by delivery cannon.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Changes:
+    - (TTH) Added depleted acid byproduct to new alternate integrated circuit recipe.
+    - Renamed items folder to icons, like every other mod.
+  Bugfixes:
+    - Fixed incorrect condition for adding toluene byproduct to phenol from oil recipe.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.

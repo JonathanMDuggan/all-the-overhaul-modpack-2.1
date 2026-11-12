@@ -1,0 +1,442 @@
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2026-11-12
+  Changes:
+    - Unofficial port to Factorio 2.1.
+---------------------------------------------------------------------------------------------------
+Version: 2.4.21
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 2.4.20
+Date: 2026-06-03
+  Changes:
+    - Removed hr textures on prototypes (Simon Brodtmann)
+    - Fixed missing locale (Simon Brodtmann)
+    - Added matter stabilizers to zinc ore (Morganite)
+---------------------------------------------------------------------------------------------------
+Version: 2.4.19
+Date: 2026-03-15
+  Changes:
+    - Updated compat to latest version of 248k-Redux
+    - Fixed locale for brass plates in foundries
+---------------------------------------------------------------------------------------------------
+Version: 2.4.18
+Date: 2025-12-03
+  Bugfixes:
+    - Fixed circular fluid handling tech when too many mods are enabled
+---------------------------------------------------------------------------------------------------
+Version: 2.4.17
+Date: 2025-11-13
+  Changes:
+    - Fixed deadlock crash when another mod improperly overwrites it
+---------------------------------------------------------------------------------------------------
+Version: 2.4.16
+Date: 2025-11-04
+  Bugfixes:
+    - Fix for Krastorio2 2.0.11 mineral water pumpjack change
+---------------------------------------------------------------------------------------------------
+Version: 2.4.15
+Date: 2025-11-01
+  Bugfixes:
+    - Fixed Matter generation recipes (Pla)
+    - Fixed Bolted Flange not unlocked with pipe (Pla)
+---------------------------------------------------------------------------------------------------
+Version: 2.4.14
+Date: 2025-10-25
+  Bugfixes:
+    - Fixed starting items not being created with setting enabled
+---------------------------------------------------------------------------------------------------
+Version: 2.4.13
+Date: 2025-10-19
+  Changes:
+    - Added dependency checks for BZ 2.0 mod forks
+  Bugfixes:
+    - Fixed zinc ore pitcure size
+---------------------------------------------------------------------------------------------------
+Version: 2.4.12
+Date: 2025-10-16
+  Bugfixes:
+    - Fixed productivity with gyroscope when renamed (Cackling Fiend)
+    - Fixed 248k crusher tech not being modified
+    - Fixed space locomotive recipe
+---------------------------------------------------------------------------------------------------
+Version: 2.4.11
+Date: 2025-10-14
+  Bugfixes:
+    - Fixed Krastorio 2 naming for Automation Core
+---------------------------------------------------------------------------------------------------
+Version: 2.4.10
+Date: 2025-10-11
+  Bugfixes:
+    - Updated 248K compatibility to use 248k-Redux
+    - Fixed error message for missing prototypes
+---------------------------------------------------------------------------------------------------
+Version: 2.4.9
+Date: 2025-10-11
+  Changes:
+    - Corrected dependecies list
+    - Added logging for missing recipes.
+    - Changed name to Brass Tacks Legacy
+  Bugfixes:
+    - Lots of Krastorio 2 fixes
+    - Space Ex migration fixes
+    - Fixed productivity not being usable for recipes
+---------------------------------------------------------------------------------------------------
+Version: 2.4.8
+Date: 2025-10-07
+  Changes:
+    - Fix for improper recipe being used for foundry tech 
+    - Fix to catalyst recipes still using old definition
+---------------------------------------------------------------------------------------------------
+Version: 2.4.7
+Date: 2025-09-30
+  Changes:
+    - Fixed graphite not being defined when Brimstuff was enabled, a mod modified the number of resources in a recipe before this mod's data-update, and BZCarbon was disabled. 
+---------------------------------------------------------------------------------------------------
+Version: 2.4.6
+Date: 2025-09-30
+  Changes:
+    - Removed RCU references. Will need to replace these with something
+  Bugfixes:
+    - Fixed Fluids Must Flow & Flow Control incompatibility
+    - Fixed softlock with Iron Sticks not being unlocked. How did this even work in the 1.1 mod??
+---------------------------------------------------------------------------------------------------
+Version: 2.4.5
+Date: 2025-09-29
+  Bugfixes:
+    - Fixed circular dependency with IfNickel-Updated
+---------------------------------------------------------------------------------------------------
+Version: 2.4.4
+Date: 2025-09-29
+  Changes:
+    - Changed mod version to major 2.X
+  Bugfixes:
+    - Fixed IfNickel-Updated compatibility
+    - Fixed naming for other planetfall-Updated mods to be released
+    - Fixes to technologies being used
+    - Fixed AAI compatibility
+    - Fixed issue with main_products not being defined when modifying recipes
+---------------------------------------------------------------------------------------------------
+Version: 1.4.3
+Date: 2025-09-28
+  Bugfixes:
+    - Fixed incorrect technology being used for unlocking flanges
+---------------------------------------------------------------------------------------------------
+Version: 1.4.2
+Date: 2025-09-27
+  Bugfixes:
+    - Fixed crashes when Krastorio 2 was enabled with the hardmode option enabled
+    - Fixed crash with If I Had A Nickel was enabled
+    - Fixed crash when technologies had pre-reqs removed
+    - Migrated Factorio 1.1 technology names to Factorio 2.0 technology names
+    - Fixed an issue with the gyroscope setting when If I Had A Nickel was enabled
+---------------------------------------------------------------------------------------------------
+Version: 1.4.1
+Date: 2025-09-27
+  Bugfixes:
+    - Fixed crash on startup when a recipe ingredient or prereq was being removed
+---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 2025-09-27
+  Changes:
+    - Updated to 2.0 and fixed k2 compat and name definitions.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.8
+  Bugfixes:
+    - Fixed an incorrect item icon path.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.7
+  Compatibility:
+    - Support for Lunar Landings added.
+  Balancing:
+    - Increased crafting time of skyseeker armatures to 20s.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.6
+  Compatibility:
+    - (SE, K2) fixed startup error caused by recent SE K2 integration update removing smelt-crafing recipes.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.5
+  Compatibility:
+    - (248k) Recipe to create gears directly from atoms now respects what material the gears are made of.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.4
+  Locale:
+    - Updated Spanish locale for consistency.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.3
+  Graphics:
+    - Rendered flywheel has a heavier rim.
+    - Rendered advanced gearbox better contrasts with basic gearbox.
+  Locale:
+    - Added Spanish translation by Sigmaleph.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.2
+  Bugfixes:
+    - Fixed startup error with Deadlock's Stacking Beltboxes
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.1
+  Bugfixes:
+    - Fixed startup error with Vortik's Deep Core Mining when in normal mode
+
+---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+  Compatibility:
+    - (SE) Zinc core fragment processing is now in the correct place in the crafting menu.
+  Graphics:
+    - Replaced technology and most item icons with high-quality renders created by Galdoc.
+    - Original graphics can still be enabled in the mod settings.
+  Changes:
+    - Renamed items folder to icons, like every other mod.
+  Info:
+    - "Enable Experimental Intermediates" option is now renamed to Hard Mode. The recipes are now more-or-less finalized. I may tweak recipes or (very unlikely) add new items for compatibility with newly released or updated mods, but otherwise they will stay as they are.
+    - The internal name of the setting will remain the same until the mod needs to undergo a major rework, to preserve compatibility with any mods that are checking the state of that setting.
+    - By "major rework" I mostly mean "compatibility with Space Age." When that happens I may make some changes and additions to both normal and hard mode since 2.0 is going to break everyone's saves anyway.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.9
+  Compatibility:
+    - Leighzer's Scrapyards gear reclamation recipe now returns brass.
+    - (exp, bztungsten, !IfNickel, !K2) If invar doesn't exist and tungsten does, and Krastorio isn't installed, hardened hulls need tungsten.
+  Balancing:
+    - (SE, exp) Added hardened hull to delivery cannon capsule recipe (balance operating cost of cannons vs. cargo rockets, makes alternate recipe more useful). Hardened hulls can be sent in the delivery cannon in case you can't make them from local resources.
+    - (SE, exp) Skyseeker Armature costs 2 -> 1 complex joints and 4 -> 6 gears (2 -> 3 steel gears with K2). This is significantly cheaper on net.
+    - (SE, exp) Space Splitter costs 2 -> 1 complex joints. Express splitter is unaffected because it is something of a luxury, but CJ's are a fairly expensive item and you can't use lower belt tiers in space.
+    - (SE, exp, maintenance) Reduced the break chance of articulated mechanisms when processing iridium (10% -> 5%)
+    - (!SE, !K2, exp) Utility science pack costs 4 -> 3 complex joints.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.8
+  Compatibility:
+    - Added checks to prevent a startup error with textplates with certain mod configurations
+  Changes:
+    - Moved technology definitions to their own lua file (overdue).
+  Locale:
+    - Updated mod-setting-description for SE maintenance recipes to reflect the change a few versions back (skyseeker maintenance need moved from delivery cannons to telescopes)
+  Bugfixes:
+    - (FF) Brazen nodule dredging recipe no longer enabled at the start of the game.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.7
+  Compatibility:
+    - Added intermediates to recipes in K2 additional locomotives.
+    - (exp, manganese) Mangalloy replaces galvanized steel in hardened hulls.
+    - (exp, manganese) Added mangalloy to industrial drill heads.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.6
+  Bugfixes:
+    - (248k) star engine recipes are no longer available at the start of the game
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.5
+  Bugfixes:
+    - Fixed recipe changes to vtk-deep-core-mining machines not applying due to a typo
+  Features:
+    - Added data for laser mill recipes in unreleased mod
+  Locale:
+    - Updated mod-setting-description for experimental intermediates to reflect the addition of the elite gearbox and industrial drill head.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.4
+  Features:
+    - (exp, bztungsten, bzcarbon) Added industrial drill heads, to condense together several items commonly used together in advanced mining drills. The recipe only appears if at least one installed mod adds a drill of the appropriate tech level. Affected mods: Krastorio2, AAI industries/SE, Big Mining Drill, VortiK's deep core mining, 248k
+  Changes:
+    - Renamed brass pipe fitting to bolted flange, on account of that's what the item it depicts is (thanks tumblr user gudamor). Also changed item ID to match, which may break any other mods that use it in recipes. I don't know if any exist but if they do break, this is why.
+    - Where possible, standardized the filenames of item and technology icons to be the same as the ID of the prototype they represent.
+    - Changed changelog headings for mod compatibility from "modding" to "compatibility"
+  Compatibility:
+    - (exp) Added intermediates to recipes from SE Space Trains
+    - (bzsilicon) No longer overrides the technology name and description or item name for the bzsilicon gyroscope if the Brass Tacks gyroscope is disabled.
+    - Added airtight seals to valves from Flow Control
+    - Basic integration with 248k mod. There is allegedly a startup error with Brass Tacks + 248k but I cannot replicate it. Any more details are appreciated.
+  Graphics:
+    - (SE, exp) Better icon for skyseeker armature.
+  Balancing:
+    - (SE, exp) Maintenance recipes: removed need for replacement skyseeker armatures from delivery cannons, added it to telescopes. (Skyseeker armatures require such diversity of complex components and materials that they compromised the ability to manufacture delivery cannon capsules from local resources on outpost worlds without a dedicated supply line, which is one of the biggest advantages of DCs)
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.3
+  Bugfixes:
+    - Added extra checks to a recipe-modification function to prevent a rare startup error.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+  Bugfixes:
+    - (K2, exp) Fixed elite gearbox recipe not unlocking without SE.
+  Changes:
+    - Reorganized intermediate products crafting menu slightly.
+    - (SE, exp) Standardized alternate recipe appearances (modifier icon in the upper left).
+  Balancing:
+    - (SE, bzgold) Fixed vitalic airtight seal recipe using more brass per product than the base airtight seal recipe when used with noble metals
+    - (SE, bzgold) Remove silver brazing alloy from space pipes if airtight seals exist, since it's a component of them
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+  Bugfixes:
+    - Fixed a startup error when used with Cheese's Concentrated Solar
+  Graphics:
+    - (exp) Added a little extra detail on the advanced gearbox so it's no longer a strict recolor.
+  Compatibility:
+    - (exp, K2) Added elite gearboxes that cost imersium gears. They aren't super brass-themed but they complete the trifecta of gearbox intermediates using all tiers of Krastorio gears.
+    - (exp, K2) Reworked gearbox inclusion in K2 belt recipes a bit. Green belts need -3 imersium gears in exchange for an advanced gearbox. Purple belts need no imersium gears or heavy bearings in exchange for an elite gearbox. No more complex joints in basic green/purple belts (they are still needed for green/purple loaders)
+    - (exp, K2, SE) Elite gearboxes are needed for deep space belts and heavy assemblies.
+  Balancing:
+    - (exp, K2) To compensate for the increased demand for gearboxes, they are slightly cheaper (-1 gear each, which matches the default Krastorio belt upgrade scheme of 4 gears per tier), and normal and advanced gearboxes can now benefit from productivity.
+    - (exp, SE) Alternate hardened hull recipe can now use productivity modules
+    - (exp, aai) Area mining drill now needs advanced gearboxes. If motorized articulators are added to its recipe, remove steel to counter ingredient bloat.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+  Balancing:
+    - (FF, exp) Hardened hulls cost 2x the lead with Freight Forwarding.
+  Compatibility:
+    - (K2) Resources are now affected by the K2 stack size setting.
+    - (!K2) Added intermediates to recipes of the standalone versions of K2 advanced chemplant and advanced assembler.
+    - Added intermediates to advanced centrifuge recipe.
+    - (FF) Added intermediates to recipes from mods in the Freight Forwarding mod pack: Underwater pipes, Intermodal containers, Cargo ships, Mini trains, Cheese's concentrated solar. Many are only changed when experimental intermediates are enabled.
+    - (FF) Seamount dredging recipes for zinc
+  Changes:
+    - Changed how brass is produced with specific other mods.
+    - With Krastorio: removed brass precursor item since furnaces can take multiple ingredients. Brass is smelted directly from copper and zinc in furnaces. It can still be made in the foundry if available.
+    - With BZ aluminum: brass is initially made from zinc and copper ores instead of plates. This recipe has a 50% yield. The ability to make brass properly is unlocked at either copper processing or foundry, depending on whether the foundry mod is in minimal mode. Copper plates once again require researching copper processing (the recipe will still be unlocked in existing saves)
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.7
+  Bugfixes:
+    - (K2) Fixed an error on startup when experimental intermediates are disabled.
+  Changes:
+    - (K2) Iron gears should now always be replaced with brass gears, instead of being brass gears with SE and mixed iron/brass without. (This was a strange decision by past-me which I cannot rightly rationalize. Just pick one!) Gear production in existing K2 non-SE saves should remain functional but optimized designs may need restructuring to reach previous throughput. The steel gear recipe is unaffected.
+  Balancing:
+    - (K2) Fixed inconsistency with advanced and superior splitter recipes (they now require bearings with experimental intermediates disabled, to match the belts of their tier)
+  Graphics:
+    - (K2) Changed brass gear icon to better match the style of Krastorio gears.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+  Bugfixes:
+    - (K2, bzlead) Fixed one of the alternate rifle ammo recipes not requiring brass
+    - (FMF) Fixed an error with Fluids Must Flow
+    - Fixed a variable not being local.
+  Balancing:
+    - (K2) Changes to tech card recipes should now respect mod settings. i.e. K2-specific changes should not be changing recipes of tech cards set to use the vanilla recipe.
+    - (exp) Reduced crafting time of gearboxes (6s -> 3s for a pair)
+    - (exp) Advanced gearboxes now require lubricant
+    - (exp) Complex joints cost more articulated mechanisms (normal recipe 6 -> 8, expensive recipe 8 -> 12)
+  Compatibility:
+    - (SE) Added brass ingots, made in the casting machine. Have all the advantages of other ingots.
+    - (SE, exp) Added alternate recipe for hardened hulls using iridium.
+    - (bzgold) Adds silver brazing alloy to airtight seal recipe, if both exist.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+  Bugfixes:
+    - (exp) Fixed expensive recipe for articulated mechanism overriding normal recipe.
+    - (exp) Fixed changes to production and utility science only applying with MoreScience.
+    - (K2) Smelting-crafting recipe for brass gears uses brass precursor instead of iron ore and no longer has wrong icon.
+    - (exp, SE) Fixed incorrect icon scale for iridium mechanisms technology.
+    - (exp) Fixed express belt recipe not requiring advanced gearboxes in expensive mode.
+  Changes:
+    - (aai, exp) Steel in strongbox, storehouse, warehouse replaced with galvanized steel. If K2 is installed, only replaces steel beams.
+    - (exp) Steel in refined concrete replaced with galvanized steel.
+    - (exp) Galvanized steel plates are now unlocked with steel processing. Replaced galvanized steel technology with one that unlocks only hardened hulls. Modified tech prerequisites accordingly.
+    - (exp) Renamed complex mechanical joint to simply complex joint.
+    - (exp) Gate recipe: 2 steel -> 1 hardened hull
+  Balancing:
+    - (exp, !K2, !SE) Reduced gearboxes needed for production science.
+    - (exp) Removed logistics 2 prerequisite from automobilism.
+  Compatibility:
+    - Added intermediates to recipes for Fluids Must Flow ducts and pumps.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+  Bugfixes:
+    - Fixed a variable not being local
+    - (K2, bzlead) Fixed alt rifle ammo recipes not needing brass plates.
+  Compatibility:
+    - Golden text plates now use brass instead of sulfur (only if another mod doesn't add gold)
+    - (exp) Steel text plates now use galvanized steel instead of regular steel
+    - (SE, bzcarbon) Added alternate recipe for airtight seals
+    - (SE, exp) Added alternate recipes for complex mechanical joints and gearboxes using iridium
+    - Compatibility with MoreScience
+  Balancing:
+    - (exp, bzaluminum, K2) Removed BZ aluminum plate from K2 inserter parts recipe (IP already requires articulated mechanism which requires aluminum)
+    - (exp, K2) Changed gearbox recipe when using K2: double yield, double gear cost, same galvanized steel cost, +50% electric motor cost with AAI, double motor cost with IfNickel and no AAI
+    - (K2) Replace sulfuric acid with batteries in blue science
+    - (K2, !SE) Added steel pump to production science
+    - (SE) Scrap recycling can produce zinc ore.
+    - (exp) Added marathon recipes for flywheels and articulated mechanisms.
+  Features:
+    - (SE, exp) Added new SE-only (really AAI signal transmission only) experimental intermediate, skyseeker armature. Required for stuff that has to point at the sky with precision (delivery cannons, telescopes, artillery, etc). Sprite still needs some work.
+    - (exp) Added new experimental intermediate, gyroscope. Primarily needed for bot frames and rocket control units. The BZ silicon gyroscope takes precedence by default but there is a startup setting to override it with the Brass Tacks gyroscope icon and recipe (which is more expensive).
+  Locale:
+    - Change display name of gear wheels to brass gear wheels if all iron is removed from their recipe (internal id unaffected)
+  Graphics:
+    - Change icon of gear wheels to a 100% brass image if all iron is removed from their recipe
+    - (exp) Slightly lightened articulated mechanisms so they contrast better with conveyor belts
+  Info:
+    - This update is incomplete. I have not addressed balance feedback thoroughly. I am uploading it anyway as a form of backup in case my computer is damaged by hurricane Ian. If you experience problems please report them and manually downgrade via the web mod portal - if I am not dead it may still be some time before I can fix it, due to Hurricane Reasons. Inshallah the travails will end.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+  Compatibility:
+    - Added galvanized steel to SE core miners (this change had been mistakenly included in IfNickel instead of here)
+    - Moved zinc matter conversion to its own technology
+  Bugfixes:
+    - Fixed a crash on startup when used with K2/SE
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+  Bugfixes:
+    - Fixed recipe changes that replaced iron plates with gears not also reducing/removing the aluminum cost when used with BZ aluminum
+    - Fixed airtight seals unlocked with wrong technology when using IfNickel
+  Compatibility:
+    - Foundry is now officially listed as an optional dependency, to make it clearer that there is compatibility and avoid load order shenanegans
+    - Initial Space Exploration and Krastorio2 support.
+    - Boblogistics pipes and belts now use relevant BrassTacks intermediates.
+    - If BZ tin is installed and bronze is enabled, removes bronze plates from the electric engine recipe and moves them to the bearing recipe.
+  Features:
+    - Added experimental intermediates (disabled by default, check startup settings). They make things moderately more complex and expensive. They are still in the balancing/feedback stage and may be changed, added, or removed.
+    - Added startup option to absorb BZ solder into brass pipe fittings and remove it from recipes where it represents a soldered pipe connection. Intended to keep ingredient counts under control.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+  Compatibility:
+    - Brass can now be made in the BZ foundry if it is available. If so, only the foundry recipe for brass plates can benefit from productivity modules.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+  Other:
+    - Improved recipe-modify.lua functionality.
+  Features:
+    - Added new intermediate airtight seal. Only exists if installed with bzcarbon. Replaces pipe fittings in pump, rocket fuel, flame ammo. Mainly intended for use with the nickel mod where it is an ingredient in valves.
+    - Removes graphite from pump recipe if installed with bzcarbon (it was moved to the airtight seal)
+    - Added functionality to enable recipes unlocked by already-researched technologies on game load.
+    - Added zinc plates.
+  Balancing:
+    - Brass plates now smelt faster to compensate for having to effectively be processed twice.
+    - Bearings now cost double the balls in marathon mode
+    - Brass precursor now has a ratio of 1 zinc : 1 copper. This is a less realistic ratio but should make total zinc usage less of an afterthought.
+    - Brass precursor now produced in batches of 2 in normal mode and 1 in marathon mode (formerly 3 and 2)
+    - Assembling machine 3 costs 2 electric engines instead of 1
+  Changes:
+    - Brass precursor is now made from copper and zinc plates rather than ores.
+    - Batteries now cost zinc plates rather than zinc ore.
+    - Zinc ore is now called zinc ore, rather than just "zinc."
+  Compatibility:
+    - Compression recipes for Deadlock's Beltboxes and Crating Machine.
+    - Changed icon for stack of 5 gears to match the icon from Brass Tacks.
+    - Added bearings to recipe of express loaders and beltboxes.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.

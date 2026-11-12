@@ -1,0 +1,45 @@
+{
+  "name": "IfNickel-Updated",
+  "version": "3.0.0",
+  "title": "If I Had A Nickel Legacy",
+  "author": "ashier",
+  "homepage": "https://github.com/AtelierAmber/IfNickel-Updated",
+  "description": "Updated to 2.0. Adds nickel ore and plates, invar alloy, and some mechanical components.",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base >= 2.1.22",
+    "? bzlead",
+    "? bzaluminum",
+    "? bzcarbon",
+    "? bzfoundry",
+    "? bztin",
+    "? bztungsten",
+    "? bzgold",
+    "? bzlead2",
+    "? bzaluminum2",
+    "? bzcarbon2",
+    "? bzfoundry2",
+    "? bztin2",
+    "? bztungsten2",
+    "? bzgold2",
+    "? BrassTacks-Updated",
+    "? manganese",
+    "? space-exploration",
+    "? aai-industry",
+    "? deadlock-beltboxes-loaders",
+    "? DeadlockCrating",
+    "? Krastorio2 >= 2.0.11",
+    "? FluidMustFlow",
+    "? Expensive_Fluid_Must_Flow_Recipes",
+    "? 248k-Redux >= 0.1.35",
+    "? LunarLandings"
+  ],
+  "package": {
+    "git_publish_branch": "main",
+    "ignore": [
+      "imgui.ini",
+      "screenshots/*"
+    ],
+    "sync_portal_details": true
+  }
+}

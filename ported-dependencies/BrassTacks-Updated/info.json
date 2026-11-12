@@ -1,0 +1,52 @@
+{
+  "name": "BrassTacks-Updated",
+  "version": "3.0.0",
+  "title": "Brass Tacks Legacy",
+  "author": "ashier",
+  "homepage": "https://github.com/AtelierAmber/BrassTacks-Updated",
+  "description": "Updated to 2.0. Adds zinc ore so you can make the best alloy.",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base >= 2.1.22",
+    "? bzlead",
+    "? bzaluminum",
+    "? bzcarbon",
+    "? bztin",
+    "? bzfoundry",
+    "? bzzirconium",
+    "? bzlead",
+    "? bzgold",
+    "? bzlead2",
+    "? bzaluminum2",
+    "? bzcarbon2",
+    "? bztin2",
+    "? bzfoundry2",
+    "? bzzirconium2",
+    "? bzlead2",
+    "? bzgold2",
+    "? space-exploration",
+    "? aai-industry",
+    "? aai-containers",
+    "? aai-signal-transmission",
+    "? deadlock-beltboxes-loaders",
+    "? DeadlockCrating",
+    "? vtk-deep-core-mining",
+    "? Krastorio2 >= 2.0.11",
+    "? FluidMustFlow",
+    "? Expensive_Fluid_Must_Flow_Recipes",
+    "? cargo-ships",
+    "? underwater-pipes",
+    "? IntermodalContainers",
+    "? FreightForwarding",
+    "? 248k-Redux >= 0.1.35",
+    "? LunarLandings"
+  ],
+  "package": {
+    "git_publish_branch": "main",
+    "ignore": [
+      "imgui.ini",
+      "screenshots/*"
+    ],
+    "sync_portal_details": true
+  }
+}

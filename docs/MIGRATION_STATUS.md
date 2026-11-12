@@ -55,20 +55,21 @@ Changed in `info.json`:
 - `MetalsForYou2` (meta mod, no 2.1 release) replaced by its nine sub-mods, which all have 2.1 releases.
 - `se-landfill-le` -> `se-landfill-le-fork`, `WipMod_TA-miners` -> `TA-Miners-Reloaded` (2.1 continuations). Unverified.
 
-Still required but **without a Factorio 2.1 release** (checked on the mod portal 2026-11-11). ATOM cannot be enabled
-until these exist for 2.1:
+Ported in this repository (`ported-dependencies/`, see its README): BrassTacks-Updated, IfNickel-Updated,
+ThemTharHills-Updated, BrimStuff-Updated, LasingAround-Updated (all 3.0.0) and DoubleWagons (1.1.0). They load in
+Factorio 2.1.24 against the base game; their compatibility code for the rest of the pack is unverified.
 
-| Mod | License | Note |
+Made optional because no Factorio 2.1 release exists and they could not be ported:
+
+| Mod | Why not ported | Effect while missing |
 | --- | --- | --- |
-| BrassTacks-Updated, IfNickel-Updated, ThemTharHills-Updated, BrimStuff-Updated, LasingAround-Updated | MIT | core content, sources at github.com/AtelierAmber |
-| Adjustable-Inventory-Size | MIT | settings-updates.lua touches its settings unguarded |
-| More_Repair_Packs | custom (XFML) | `integrations/more-repair-packs.lua` is unguarded |
-| DoubleWagons | Unlicense | `content/trains` is unguarded |
-| 5dim_compatibility | CC BY-NC-ND 4.0 | no derivatives: cannot be ported and shared |
+| Adjustable-Inventory-Size | no public source | inventory size defaults are not applied |
+| More_Repair_Packs | custom license (XFML), not reviewed | `integrations/more-repair-packs.lua` is skipped |
+| 5dim_compatibility | CC BY-NC-ND 4.0 forbids sharing a modified copy | 5dim's own K2/SE compatibility tweaks are missing; effect on ATOM unknown |
 
 ## Next steps
 
-1. Decide for the nine mods above: port them (MIT / Unlicense ones) or make them optional with guards.
+1. Install the 2.1 releases of all dependencies plus the mods from `ported-dependencies/`.
 2. Load test with the 2.1 releases of all dependencies and fix what the game reports.
 3. Compare jalm 2.0.1's `stdlib/data/recipe.lua` with `util/legacy-recipe.lua`.
 4. Changelog entry and a save migration test from a 2.0 save.

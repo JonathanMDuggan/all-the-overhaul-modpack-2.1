@@ -1,0 +1,25 @@
+{
+  "item":
+  [
+    ["microtolerance-components", "micron-tolerance-components"],
+    ["deadlock-stack-microtolerance-components", "deadlock-stack-micron-tolerance-components"],
+    ["deadlock-crate-microtolerance-components", "deadlock-crate-micron-tolerance-components"]
+  ],
+  "recipe":
+  [
+    ["advanced-methane-reforming", "advanced-methane-distillation"],
+    ["spectroscopic-methane-reforming", "spectroscopic-methane-distillation"],
+    ["gyroscope-microtolerance", "gyroscope-micron-tolerance"],
+    ["spectroscope-microtolerance", "spectroscope-micron-tolerance"],
+    ["invar-valve-microtolerance", "invar-valve-micron-tolerance"],
+    ["microtolerance-components", "micron-tolerance-components"],
+    ["microtolerance-components-in-orbit", "micron-tolerance-components-in-orbit"],
+    ["deadlock-packrecipe-microtolerance-components", "deadlock-packrecipe-micron-tolerance-components"],
+    ["deadlock-unpackrecipe-microtolerance-components", "deadlock-unpackrecipe-micron-tolerance-components"]
+  ],
+  "technology":
+  [
+    ["microtolerance-manufacturing", "micron-tolerance-manufacturing"],
+    ["microtolerance-instruments", "micron-tolerance-instruments"]
+  ]
+}

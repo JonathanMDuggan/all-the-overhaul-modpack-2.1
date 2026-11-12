@@ -1,0 +1,14 @@
+{
+  "recipe": [
+    ["iron-beam-in-laser-mill", "kr-iron-beam-in-laser-mill"],
+    ["steel-beam-in-laser-mill", "kr-steel-beam-in-laser-mill"],
+    ["steel-gear-wheel-in-laser-mill", "kr-steel-gear-wheel-in-laser-mill"],
+    ["imersium-beam-in-laser-mill", "kr-imersium-beam-in-laser-mill"],
+    ["imersium-gear-wheel-in-laser-mill", "kr-imersium-gear-wheel-in-laser-mill"],
+    ["blank-tech-card-in-laser-mill", "kr-blank-tech-card-in-laser-mill"],
+    ["blank-tech-card-silver-in-laser-mill", "kr-blank-tech-card-silver-in-laser-mill"],
+    ["empty-barrel-in-laser-mill", "barrel-in-laser-mill"],
+    ["fill-helium-barrel", "helium-barrel"],
+    ["fill-filtered-oil-barrel", "filtered-oil-barrel"]
+  ]
+}

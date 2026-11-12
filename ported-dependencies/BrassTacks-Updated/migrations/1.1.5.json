@@ -1,0 +1,16 @@
+{
+  "technology":
+  [
+    ["galvanized-steel", "hardened-hull"]
+  ],
+  "recipe":
+  [
+    ["complex-mechanical-joint", "complex-joint"],
+    ["complex-mechanical-joint-iridium", "complex-joint-iridium"]
+  ],
+  "item":
+  [
+    ["complex-mechanical-joint", "complex-joint"],
+    ["complex-mechanical-joint-iridium", "complex-joint-iridium"]
+  ]
+}

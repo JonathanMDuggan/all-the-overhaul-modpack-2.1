@@ -1,0 +1,11 @@
+{
+    "recipe":
+    [
+      ["powered-articulated-mechanism", "motorized-articulator"]
+    ],
+    "item":
+    [
+      ["powered-articulated-mechanism", "motorized-articulator"]
+    ]
+  }
+  

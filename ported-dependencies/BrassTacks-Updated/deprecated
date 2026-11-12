@@ -1,0 +1,24 @@
+local pipe_material = "iron-plate"
+if mods["bzlead"] then
+  pipe_material = "lead-plate"
+end
+
+data:extend{
+  {
+    type = "recipe",
+    name = "pipe",
+    category = "crafting",
+    normal = {
+      energy_required = 2.5,
+      ingredients = {{pipe_material, 5}, {"bolted-flange", 1}},
+      result = "pipe",
+      result_count = 5
+    },
+    expensive = {
+      energy_required = 2.5,
+      ingredients = {{pipe_material, 10}, {"bolted-flange", 1}},
+      result = "pipe",
+      result_count = 5
+    }
+  },
+}

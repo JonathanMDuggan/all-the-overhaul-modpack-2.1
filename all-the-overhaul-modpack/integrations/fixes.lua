@@ -11,6 +11,9 @@ require("trikop")
 require("ta-miners")
 require("mini-machines")
 require("aai")
-require("more-repair-packs")
+-- No Factorio 2.1 release of More Repair Packs exists yet, so it is an optional dependency for now
+if mods["More_Repair_Packs"] then
+    require("more-repair-packs")
+end
 require("solar-productivity")
 require("planetfall")

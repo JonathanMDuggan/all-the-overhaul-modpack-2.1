@@ -1,0 +1,29 @@
+## I'm a mod maker and want to make my recipes work with the laser mill. ##
+
+This mod has a system that auto-generates alternate versions of recipes for the laser mill if you specify a few values in the recipe prototype. Add a table called lasermill in the main body of your recipe prototype and give it any of the following properties.
+
+*helium*: How much helium the recipe should cost. Defaults to 1 if unspecified.
+
+*type*: The only values that do anything are "entity", "circuit", and "gubbins". This field determines whether the recipe should be usable in the laser mill depending on the mod settings governing whether the laser mill can craft entities, circuits, or gubbins. Any other value or leaving it unspecified means the recipe will always be usable in the laser mill.
+
+*remove_fluids*: if this is true, all non-helium fluids will be removed from the new recipe (or the original recipe if convert is used.) This may be necessary because the laser mill has only one input fluidbox (I'm not willing to change this.)
+
+*multiply*: if set to a number, multiplies the ingredient counts, product counts, and time of the recipe by this value before adding helium to the recipe. Useful for low value per cycle recipes that a single unit of helium would be wasted on.
+
+*convert*: If true, the recipe will be converted to a laser mill recipe in place instead of generating a copy of the recipe. All properties below se_tooltip_entity will be ignored for converting the recipe in place.
+
+*se_variant*: If convert is true, and Space Exploration is installed, generate a copy of the recipe with a crafting category of se_variant in addition to converting the recipe in place. This option exists because laser mills cannot be placed in space so converting the recipe means that the item can't be made in space at all (It is easy to make them placeable in space but the mechanical role of laser mills is extra productivity and the rule is no productivity bonuses in space.) Crafting categories that may be of use for this are space-crafting (space assembler), space-manufacturing (space manufactory), space-laser (laser facility). Helium will not be added to SE variants - the flavor reason for helium in laser mill recipes is "inert atmosphere" and there is no more inert atmosphere than a vacuum. Does nothing if convert is not true or SE is not installed, will cause an error if it is not a valid crafting category.
+
+*se_tooltip_entity*: For SE variants, the id of the entity to show in the tooltip. Useful values include se-space-assembling-machine, se-space-manufactory, and se-space-laser-laboratory.
+
+*productivity*: Set this to true if the recipe can use productivity modules. The laser mill's base productivity bonus always applies regardless of this setting.
+
+*unlock*: a string or list of strings denoting the tech(s) that the recipe should unlock at. You can also set this to true to make the recipe always unlocked, or false to make it not unlocked by any tech. If unspecified, it will unlock with the laser mill technology.
+
+*icon_offset*: a table with coordinates for where the small laser icon should be added to the laser mill recipe, to denote that it is different at a glance. For SE variants it will instead use the planet orbit icon from SE. If unspecified it will default to {-8, -8} which is the upper left. You can also set this to false, and the created recipe will not have this icon added to it (I do not recommend this).
+
+An exception is if you have Icon Badges installed, and the recipe already has an icon badge in the top left (either set for the recipe or inherited from its main product.) Then an unspecified icon_offset will default to {8, -8} (top right)
+
+The recipes will all be generated or converted in data-final-fixes. The reason for this system is it allows modpacks like BZ to modify a base recipe potentially many times and then for the laser mill version of the recipe to inherit all those changes, without every mod having to explicitly mess with both versions of the recipe.
+
+If you want to create laser mill usable recipes manually instead of using this system, it can craft recipes of the categories "laser-milling" (unique to the laser mill, used for helium-added variants of normal recipes), "laser-assembling" (shared with assembling machines, unused by default), or "laser-milling-exclusive" (used for recipes converted to require the laser mill, shared with the K2 advanced assembler if the setting is enabled.)

@@ -1,0 +1,338 @@
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2026-11-12
+  Changes:
+    - Unofficial port to Factorio 2.1.
+---------------------------------------------------------------------------------------------------
+Version: 2.2.15
+Date: ????
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 2.2.14
+Date: 2026-06-03
+  Changes:
+    - Added matter stabilizers to Nickel Ore (Morganite)
+---------------------------------------------------------------------------------------------------
+Version: 2.2.13
+Date: 2026-03-15
+  Changes:
+    - Updated compat to latest version of 248k-Redux
+---------------------------------------------------------------------------------------------------
+Version: 2.2.12
+Date: 2025-11-13
+  Changes:
+    - Fixed deadlock crash when another mod improperly overwrites it
+---------------------------------------------------------------------------------------------------
+Version: 2.2.11
+Date: 2025-11-04
+  Bugfixes:
+    - Fix for Krastorio2 2.0.11 mineral water pumpjack change
+---------------------------------------------------------------------------------------------------
+Version: 2.2.10
+Date: 2025-11-01
+  Bugfixes:
+    - Fix experimental parts not loading when SE was disabled (Pla)
+    - Fixed Matter generation recipes (Pla)
+---------------------------------------------------------------------------------------------------
+Version: 2.2.9
+Date: 2025-10-20
+  Bugfixes:
+    - Fixed path references when BZ 2.0 mod forks are used
+    - Fixed high res graphics not being used for some prototypes (Cackling Fiend) 
+---------------------------------------------------------------------------------------------------
+Version: 2.2.8
+Date: 2025-10-19
+  Changes:
+    - Added dependency checks for BZ 2.0 mod forks
+  Bugfixes:
+    - Fixed sprite sizes (Cackling Fiend)
+    - Fixed space locomotive compat
+---------------------------------------------------------------------------------------------------
+Version: 2.2.7
+Date: 2025-10-14
+  Bugfixes:
+    - Fixed Krastorio 2 naming for Automation Core
+    - Fixed Krastorio 2 naming for Inserter Parts
+---------------------------------------------------------------------------------------------------
+Version: 2.2.6
+Date: 2025-10-11
+  Bugfixes:
+    - Updated 248K compatibility to use 248k-Redux
+    - Fixed error message for missing prototypes
+---------------------------------------------------------------------------------------------------
+Version: 2.2.5
+Date: 2025-10-11
+  Changes:
+    - Corrected dependecies list
+    - Changed name to If I Had A Nickel Legacy
+    - Added logging for missing recipes.
+  Bugfixes:
+    - Lots of Krastorio 2 fixes
+    - Space Ex migration fixes
+    - Fixed productivity not being usable for recipes
+---------------------------------------------------------------------------------------------------
+Version: 2.2.4
+Date: 2025-10-07
+  Changes:
+    - Fixes to catalyst recipes using old catalyst definition
+    - More K2 and compatibility fixes
+---------------------------------------------------------------------------------------------------
+Version: 2.2.3
+Date: 2025-10-01
+  Changes:
+    - Fix for crash when BZTin tinned cable was enabled with SE and K2 due to improper tech migration
+---------------------------------------------------------------------------------------------------
+Version: 2.2.2
+Date: 2025-09-30
+  Changes:
+    - Removed RCU references. Need to replace this with something eventually
+  Bugfixes:
+    - Fixed glass recipes when K2 is disabled and AAI is enabled
+    - Fixed Fluids Must Flow & Flow Control incompatibility
+    - Fixed softlock with Iron Sticks not being unlocked. How did this even work in the 1.1 mod??
+---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+Date: 2025-09-29
+  Changes:
+    - Changed major version to 2
+  Bugfixes:
+    - Fixed BrassTacks compatibility using old BrassTacks
+    - Fixed incorrect tech for valves 
+    - Bunch of compatibility fixes for K2 and upcoming BZ. I really do need to rewrite this entire mod...
+    - Adding Updated optional reqs in info
+    - Fixed AAI compatibility
+    - Fixed rare crash when main_product was undefined
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025-09-27
+  Changes:
+    - Updated to 2.0
+  Bugfixes:
+    - Fixes to incorrect technologies being used when setting unlock recipes
+    - Fixed incompat issue with BrassTacks
+    - K2 Compat updated
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+  Bugfixes:
+    - Fixed a startup error with LL due to a changed internal name.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+  Compatibility:
+    - Support for Lunar Landings added.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+  Locale:
+    - Added Spanish translation by Sigmaleph.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+  Compatibility:
+    - (bztungsten) Add rocketry as a prereq for gimbaled thruster research if rocket engine nozzles exist.
+    - (SE) Nickel core fragment processing is now in the correct place in the crafting menu.
+  Changes:
+    - Renamed items folder to icons, like every other mod.
+  Info:
+    - "Enable Experimental Intermediates" option is now renamed to Hard Mode. The recipes are now more-or-less finalized. I may tweak recipes or (very unlikely) add new items for compatibility with newly released or updated mods, but otherwise they will stay as they are.
+    - The internal name of the setting will remain the same until the mod needs to undergo a major rework, to preserve compatibility with any mods that are checking the state of that setting.
+    - By "major rework" I mostly mean "compatibility with Space Age." When that happens I may make some changes and additions to both normal and hard mode since 2.0 is going to break everyone's saves anyway.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.18
+  Balancing:
+    - (AAI, exp) Reduced nickel needed per motor by 1 with both AAI industry and experimental intermediates enabled, to slightly counter the increased demand for motors.
+    - (AAI, manganese, bismuth) Reduce nickel needed per motor by 1 if bismanol is added to their recipe.
+    - (SE, exp) Cargo rocket sections need 2 -> 1 gimbaled thrusters. Satellite rockets are unaffected.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.17
+  Bugfixes:
+    - (FF) Meteoric nodule dredging recipe no longer enabled at the start of the game.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.16
+  Compatibility:
+    - (248k, SE, exp) Removed ingredient limit on magnetising facility so 248k magnets are craftable
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.15
+  Bugfixes:
+    - (K2, bztitanium, SE, exp) Fixed startup error when nitinol plates should be possible to make, Krastorio2 is installed, and bzfoundry is either disabled or in minimal mode.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+  Bugfixes:
+    - (248k) star engine recipes are no longer available at the start of the game
+  Graphics:
+    - (SE, bztitanium, exp) Reversed the red-blue gradient on the self-regulating valve icon
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.13
+  Bugfixes:
+    - (248k, exp) Fixed typo not adding advanced machining tools to fusion assembler recipe
+    - (248k) Fixed an incorrect locale key
+    - (both K2/cargoships compatibility mods at once) Fixed a startup error.
+  Locale:
+    - Updated mod-setting-description for experimental intermediates to reflect the addition of nitinol.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+  Features:
+    - (SE, bztitanium, exp) Added nitinol plates, nitinol mesh, and self-regulating valves. Unlocked after the satellite rocket.
+    - Currently, technologies that should have nitinol as a prerequisite do not. This is because SE wipes out research progress if new techs are added as prereqs of already-researched techs mid-playthrough. Nitinol will probably remain a weird floating node on the tech tree unless SE adds a workaround for this.
+  Changes:
+    - Where possible, standardized the filenames of item and technology icons to be the same as the ID of the prototype they represent.
+    - Changed changelog headings for mod compatibility from "modding" to "compatibility"
+    - (bzgold) Alternate motor recipe from silver wire is no longer the default for auto-handcrafting
+  Compatibility:
+    - Added electromagnets to recipes from SE Space Trains
+    - Added valves and flow controllers to valves from Flow Control. Yes.
+    - Basic integration with 248k mod.
+  Graphics:
+    - (exp) Better icons for advanced machining tool, gimbaled thruster
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+  Bugfixes:
+    - (bzgold) Fixed motor from silver wire recipe not accepting productivity modules.
+    - (foundry) Fixed previous update disabling foundry support
+    - (SE, exp) Fixed startup error from insufficient optionalness around an unfinished optional feature.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+  Bugfixes:
+    - Added extra checks to a recipe-modification function to prevent a rare startup error.
+  Compatibility:
+    - (SE, exp) made gimbaled thrusters a prereq of the satellite rocket silo. Properly this time!
+  Changes:
+    - Reorganized intermediate crafting menu slightly.
+    - Standardized alternate recipe appearances (modifier icon in the upper left).
+    - (SE, exp) Alternate flow controller recipe now uses vitamelange bloom icon instead of biomass icon, since that's what it requires now.
+    - Removed invar plate from nuclear reactor recipe when Brass Tacks experimental intermediates are enabled (it's an ingredient in hardened hulls)
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+  Bugfixes:
+    - (SE, exp) fixed an error on startup due to a typo'd recipe
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Balancing:
+    - (SE, exp) Increased maintenance needs of hypercoolers and radiators.
+    - (SE, exp) Rebalanced maintenance needs of radiators so the more thermofluid-efficient recipes are less flow-controller-efficient.
+    - (exp, bzgold, !SE) If temperature sensors are added to cooling fans, they cost 1 less plastic to compensate.
+    - (SE, exp) Rebalanced biotech flow controller recipes: they no longer produce contaminated scrap, and cost vitamelange blooms instead of biomass specimens. These recipes compared unfavorably to the default recipes if performed in space due to the lack of productivity and complex production chain of biomass, and if performed on a planet the cost and hassle of transporting resources to and from space ate much of the material gains.
+  Compatibility:
+    - (K2) Resources are now affected by the K2 stack size setting.
+    - (!K2) Added intermediates to recipes of the standalone versions of K2 advanced chemplant and advanced assembler.
+    - (FF) Added intermediates to recipes from Cargo ships, Cheese's concentrated solar. Many are only changed when experimental intermediates are enabled.
+    - (FF) Seamount dredging recipes for nickel
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Bugfixes:
+    - (SE, exp) Added electromagnets to space belts. (This was intended all along but there was a typo.)
+    - (SE) Added valves/adv flow controllers to cargo rocket silo. (Also a typo.)
+    - (SE, exp) Fixed tech tree deadlock with adv machining tools.
+    - Fixed a variable not being local.
+  Balancing:
+    - (K2) Restored circuits to green science recipe. With AAI industry, motors replace gears. Without they are simply added.
+    - (K2) Changes to tech card recipes should now respect mod settings. i.e. K2-specific changes should not be changing recipes of tech cards set to use the vanilla recipe.
+    - (exp) Reduced crafting time of machining tool (5s -> 2s) and advanced machining tool (5s -> 4s)
+    - (SE, exp) Improved efficiency of alternative flow controller recipes. I'm still not sure on the balancing for these, the benefit seems pretty marginal and probably mostly/entirely canceled by transport costs. feedback is appreciated.
+    - (SE, exp) Nickel electromagnet research now requires chemical science packs since it's not useful till then.
+  Changes:
+    - (exp) Moved gimbaled thruster recipe to its own technology.
+    - (exp) Atomic bombs now require gimbaled thrusters.
+  Compatibility:
+    - (SE) Added invar ingots, made in the casting machine. Have all the advantages of other ingots.
+    - (bzgold) Silver brazing alloy in valves, only if brass absent. Replaces SBA in buildings that cost valves.
+    - (bzgold) Alternate motor recipe using silver wire
+    - (bzgold, exp, !SE) Moved temp sensor from mainboard to cooling fan so it can get into more products
+    - (bzgold, exp, !SE) Moved temp sensor from rocket control unit to gimbaled thruster since RCU recipe is getting a bit overstuffed and Engines Can Overheat Too
+  Graphics:
+    - Doubled the thresholds of ore-per-tile for nickel ore visual stages.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Bugfixes:
+    - (exp) Gate technology now correctly has mechanical engineering as a prerequisite
+  Changes:
+    - (exp, SE) Moved nickel electromagnet in the crafting menu (now next to holmium solenoid)
+    - If steel in valves is enabled, steel processing is now a prerequisite technology for valves.
+    - Renamed powered articulated mechanism to motorized articulator.
+  Balancing:
+    - (exp) Removed green circuit from gate recipe to compensate for cost of MAs.
+    - (exp, !K2, !SE) Reduced flow controllers needed for production science.
+  Compatibility:
+    - Added intermediates to recipes for Fluids Must Flow ducts and pumps.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Balancing:
+    - (K2) Replace green circuits with motors in green science
+    - (K2) Replace sulfuric acid with batteries in blue science
+    - (K2, !SE) Added steel pump to production science
+    - (bzaluminum, !AAI) reduce aluminum cost of motors
+    - (AAI) Electric motors require more nickel to keep resource ratio closer to intended; nickel ore generation raised slightly to compensate.
+    - (AAI) Reduced motors needed for assembling machine 1, chemical plant, electric mining drill
+    - (AAI, exp) Reduced powered articulated mechanisms needed for solar panel, assembling machine 2
+    - (SE) Scrap recycling can produce nickel ore.
+    - (exp) Reduced powered articulated mechanisms needed for red splitter
+  Features:
+    - (SE, exp) Added new SE-only experimental intermediate, advanced flow controller. Required for hi-tech chemistry stuff in space.
+    - (SE, exp) Added alternate recipe for basic and advanced flow controllers using biological handwaving.
+    - (SE, exp) Added new SE-only experimental intermediate, nickel electromagnet. Required for basic space infrastructure (to anchor items to belts, plasma containment in pipes, etc.), big motors, particle accelerators.
+    - (SE, exp) Particle accelerators and similar frequently need replacement electromagnets; radiators and hypercoolers occasionally need replacement flow controllers. This change may be too invasive to existing factories and/or to the overall structure of SE and so can be toggled.
+  Changes:
+    - Rearranged changelog to correctly display most recent changes first in the web mod portal
+  Compatibility:
+    - Compatibility with MoreScience
+  Info:
+    - This update is incomplete. I have not addressed balance feedback thoroughly. I am uploading it anyway as a form of backup in case my computer is damaged by hurricane Ian. If you experience problems please report them and manually downgrade via the web mod portal - if I am not dead it may still be some time before I can fix it, due to Hurricane Reasons. Inshallah the travails will end.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Bugfixes:
+    - Fixed a variable not being local
+    - Fixed invar precursor not being unlocked
+  Compatibility:
+    - (exp) If bztin tinned cable is present and experimentals are enabled, adds tinned cable as a prerequisite technology to valves. Additionally removes green science requirement from tinned cable if installed with Krastorio since valves are red science there. Tinned cable was already an ingredient in flow controllers; this simply makes the dependency more obvious.
+  Balancing:
+    - (exp) Reduced powered articulated mechanisms in solar panel recipe from 5 to 2.
+    - Reduces steel cost of SE bioscrubbers if steel in valves is enabled.
+    - (exp) Reduces number of flow controllers added to production science pack if steel in valves is enabled.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+  Bugfixes:
+    - Fixed formatting silliness in previous changelog (for once, the mod portal changelog viewer was less robust than the ingame one!)
+    - Fixed typo causing too expensive filter inserters in K2 + SE
+    - (exp) Fixed powered articulated mechanism recipe not being unlocked by mechanical engineering tech
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Bugfixes:
+    - Fixed a crash on startup due to recipe changes that should have been in Brass Tacks being here instead
+    - Moved nickel matter conversion to its own technology
+    - Fixed a crash on startup when used with K2/SE
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Bugfixes:
+    - Invar processing and valve technologies no longer ignore tech cost multiplier
+    - Fixed logistic chests costing more motors than intended when used with AAI containers
+    - Renamed valves to invar valves so Bob's Logistics doesn't eat them.
+  Features:
+    - Added experimental intermediates (disabled by default, check startup settings). They make things moderately more complex and expensive. They are still in the balancing/feedback stage and may be changed, added, or removed.
+  Compatibility:
+    - AAI industries compatibility: when installed together IfNickel no longer adds its own motor item or recipe, instead adding nickel to AAI electric motors.
+    - Initial Space Exploration and Krastorio2 support.
+  Balancing:
+    - Nickel deposits are a bit larger.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.

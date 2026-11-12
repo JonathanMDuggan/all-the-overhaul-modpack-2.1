@@ -1,0 +1,7 @@
+require("prototypes.burner_chem")
+require("prototypes.greenhouse")
+require("prototypes.items")
+require("prototypes.ore")
+require("prototypes.particle")
+require("prototypes.recipe")
+require("prototypes.technology")

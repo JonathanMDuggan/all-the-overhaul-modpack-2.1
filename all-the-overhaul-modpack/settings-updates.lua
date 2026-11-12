@@ -390,5 +390,8 @@ if mods["DoubleWagons"] then
 end
 
 --Adjustable-Inventory-Size
-data.raw["bool-setting"]["ais-inventorysize-enabled"].default_value = true
-data.raw["int-setting"]["inventorysize"].default_value = 90
+-- No Factorio 2.1 release of Adjustable-Inventory-Size exists yet, so it is an optional dependency for now
+if mods["Adjustable-Inventory-Size"] then
+    data.raw["bool-setting"]["ais-inventorysize-enabled"].default_value = true
+    data.raw["int-setting"]["inventorysize"].default_value = 90
+end

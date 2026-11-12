@@ -1,0 +1,6 @@
+require("prototypes.item")
+require("prototypes.ore")
+require("prototypes.particle")
+require("prototypes.tech")
+require("prototypes.recipe")
+--require("prototypes.achievement")

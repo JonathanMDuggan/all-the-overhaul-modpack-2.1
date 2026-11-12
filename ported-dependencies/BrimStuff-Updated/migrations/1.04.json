@@ -1,0 +1,18 @@
+{
+  "item":
+  [
+    ["saltpeter", "potassium-nitrate"],
+    ["deadlock-stack-saltpeter", "deadlock-stack-potassium-nitrate"],
+    ["deadlock-crate-saltpeter", "deadlock-crate-potassium-nitrate"]
+  ],
+  "recipe":
+  [
+    ["saltpeter", "potassium-nitrate"],
+    ["ammonia-from-saltpeter", "ammonia-from-potassium-nitrate"],
+    ["saltpeter-disposal", "potassium-nitrate-disposal"],
+    ["deadlock-packrecipe-saltpeter", "deadlock-packrecipe-potassium-nitrate"],
+    ["deadlock-unpackrecipe-saltpeter", "deadlock-unpackrecipe-potassium-nitrate"],
+    ["deadlock-stacks-stack-saltpeter", "deadlock-stacks-stack-potassium-nitrate"],
+    ["deadlock-stacks-unstack-saltpeter", "deadlock-stacks-unstack-potassium-nitrate"]
+  ]
+}
