@@ -212,6 +212,13 @@ function atom.util.Technology(value)
                         end
                     end
                 else
+                    -- An ingredient that is registered twice prevents the game from loading. The 2.1 versions of
+                    -- some dependencies already contain packs that ATOM used to add itself.
+                    for _, existing in pairs(technology.unit.ingredients) do
+                        if (existing[1] or existing.name) == ingredientName then
+                            return
+                        end
+                    end
                     table.insert(technology.unit.ingredients, { ingredientName, amount or 1 })
                 end
             end

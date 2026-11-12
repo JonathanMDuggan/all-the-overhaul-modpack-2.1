@@ -13,7 +13,7 @@
 ---   * A recipe that does not exist is logged and every method on it is a no-op.
 ---   * The `{ name, amount }` shorthand only accepts items (any item prototype type), never fluids. An unknown item is
 ---     logged and nothing is added or replaced.
----   * add_ingredient appends without looking for an existing ingredient of the same name.
+---   * add_ingredient appends. (Exception since the 2.1 port: see mergeNote below.)
 ---   * replace_ingredient replaces the first matching ingredient with a fresh `{ type, name, amount }` table and does
 ---     nothing when the old ingredient is not part of the recipe.
 ---   * change_category only applies when the recipe category exists.
@@ -58,6 +58,24 @@ local function format(ingredient)
     return { type = "item", name = name, amount = ingredient[2] or 1 }
 end
 
+--- @return number|nil The index of the first ingredient with this name
+local function find(ingredients, name)
+    for i, existing in pairs(ingredients) do
+        if existing[1] == name or existing.name == name then
+            return i
+        end
+    end
+    return nil
+end
+
+--- Factorio refuses recipes that list an item twice. stdlib never checked for that, and with the Factorio 2.0 versions of
+--- the dependencies it never happened. Their 2.1 versions changed some recipes (5dim most of all), so an ingredient ATOM
+--- adds can already be there. In that case the existing entry gets the amount ATOM asked for instead of a second entry.
+local function mergeNote(recipeName, itemName, oldAmount, newAmount)
+    log("ATOM legacy Recipe: '" .. recipeName .. "' already contains '" .. itemName .. "' (" .. tostring(oldAmount)
+        .. "), amount set to " .. tostring(newAmount) .. " instead of adding it twice.")
+end
+
 --- @return boolean Whether the wrapped recipe exists
 function Recipe:is_valid()
     return self.prototype ~= nil
@@ -71,7 +89,13 @@ function Recipe:add_ingredient(ingredient)
         local new = format(ingredient)
         if new then
             self.prototype.ingredients = self.prototype.ingredients or {}
-            table.insert(self.prototype.ingredients, new)
+            local existing = find(self.prototype.ingredients, new.name)
+            if existing then
+                mergeNote(self.prototype.name, new.name, self.prototype.ingredients[existing].amount, new.amount)
+                self.prototype.ingredients[existing].amount = new.amount
+            else
+                table.insert(self.prototype.ingredients, new)
+            end
         end
     end
     return self
@@ -86,10 +110,16 @@ function Recipe:replace_ingredient(old, ingredient)
     if self:is_valid() then
         local new = format(ingredient)
         if new then
-            for i, existing in pairs(self.prototype.ingredients or {}) do
-                if existing[1] == old or existing.name == old then
-                    self.prototype.ingredients[i] = new
-                    break
+            local ingredients = self.prototype.ingredients or {}
+            local index = find(ingredients, old)
+            if index then
+                local existing = find(ingredients, new.name)
+                if existing and existing ~= index then
+                    mergeNote(self.prototype.name, new.name, ingredients[existing].amount, new.amount)
+                    ingredients[existing].amount = new.amount
+                    table.remove(ingredients, index)
+                else
+                    ingredients[index] = new
                 end
             end
         end

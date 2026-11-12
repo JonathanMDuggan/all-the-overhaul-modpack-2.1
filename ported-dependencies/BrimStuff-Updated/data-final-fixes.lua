@@ -55,15 +55,21 @@ if mods["Krastorio2"] then
 end
 
 if data.raw.recipe.salt then
-  for k, v in pairs(data.raw["assembling-machine"]["assembling-machine-1"]["crafting_categories"]) do
+  -- 2.1 port: remove with table.remove (iterating backwards) so the list keeps no holes;
+  -- a list with a hole is rejected by the game as soon as another mod appends to it
+  for k = #data.raw["assembling-machine"]["assembling-machine-1"]["crafting_categories"], 1, -1 do
+    local v = data.raw["assembling-machine"]["assembling-machine-1"]["crafting_categories"][k]
     if v == "crafting-with-fluid" then
-      data.raw["assembling-machine"]["assembling-machine-1"]["crafting_categories"][k] = nil
+      table.remove(data.raw["assembling-machine"]["assembling-machine-1"]["crafting_categories"], k)
     end
   end
   if data.raw["assembling-machine"]["burner-assembling-machine"] then
-    for k, v in pairs(data.raw["assembling-machine"]["burner-assembling-machine"]["crafting_categories"]) do
+    -- 2.1 port: remove with table.remove (iterating backwards) so the list keeps no holes;
+    -- a list with a hole is rejected by the game as soon as another mod appends to it
+    for k = #data.raw["assembling-machine"]["burner-assembling-machine"]["crafting_categories"], 1, -1 do
+      local v = data.raw["assembling-machine"]["burner-assembling-machine"]["crafting_categories"][k]
       if v == "crafting-with-fluid" then
-        data.raw["assembling-machine"]["burner-assembling-machine"]["crafting_categories"][k] = nil
+        table.remove(data.raw["assembling-machine"]["burner-assembling-machine"]["crafting_categories"], k)
       end
     end
   end

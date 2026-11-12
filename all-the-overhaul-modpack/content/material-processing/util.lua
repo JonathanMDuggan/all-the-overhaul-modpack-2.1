@@ -109,7 +109,10 @@ processing.prepareConfig = function(config)
     config.additionalResults = config.additionalResults or {}
     config.additionalIngredient = config.additionalIngredient or {}
     config.unlockedBy = config.unlockedBy or {}
-    config.subgroup = config.subgroup or ""
+    -- Factorio 2.1 rejects an empty subgroup name (2.0 treated it as not set), so it stays nil unless configured
+    if config.subgroup == "" then
+        config.subgroup = nil
+    end
     createDefaultIcons()
 
     return config

@@ -102,8 +102,8 @@ function techfuncs.addSciencePackToTech(tech, item)
 end
 
 function techfuncs.addSciencePack(tech, item)
-	if not (data.raw.technology[tech] and (data.raw.tool[item] or data.raw.item[item])) then
-    error("Trying to add science: " .. item .. "(" .. serpent.line(data.raw.tool[item], {maxlength = 10}) .. ") to tech: " .. tech .. " (" .. serpent.line(data.raw.technology[tech], {maxlength = 10}) .. ")but one doesn't exist! ")
+	if not (data.raw.technology[tech] and ((data.raw.tool or {})[item] or data.raw.item[item])) then
+    error("Trying to add science: " .. item .. "(" .. serpent.line((data.raw.tool or {})[item], {maxlength = 10}) .. ") to tech: " .. tech .. " (" .. serpent.line(data.raw.technology[tech], {maxlength = 10}) .. ")but one doesn't exist! ")
 		return
 	end
 	local t = data.raw.technology[tech]
@@ -130,7 +130,7 @@ function techfuncs.removeSciencePackFromDifficulty(tech, item)
 end
 
 function techfuncs.removeSciencePack(tech, item)
-	if not (data.raw.technology[tech] and (data.raw.tool[item] or data.raw.item[item])) then
+	if not (data.raw.technology[tech] and ((data.raw.tool or {})[item] or data.raw.item[item])) then
 		return
 	end
 	local t = data.raw.technology[tech]

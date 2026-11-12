@@ -15,8 +15,9 @@ atom.util.recipe = {
 
         for _, technology in pairs(data.raw.technology) do
             if (technology.effects) then
-                for i, value in pairs(technology.effects) do
-                    if value.recipe == name then
+                -- Backwards, so that removing an entry doesn't skip the one that follows it
+                for i = #technology.effects, 1, -1 do
+                    if technology.effects[i].recipe == name then
                         table.remove(technology.effects, i)
                     end
                 end
@@ -36,7 +37,10 @@ atom.util.recipe = {
         end
         for _, technology in pairs(data.raw.technology) do
             if (technology.effects) then
-                for i, value in pairs(technology.effects) do
+                -- Backwards, so that removing an entry doesn't skip the one that follows it. (A skipped entry leaves a
+                -- technology that unlocks a removed recipe, which the game refuses to load.)
+                for i = #technology.effects, 1, -1 do
+                    local value = technology.effects[i]
                     if value.recipe and string.find(value.recipe, pattern) ~= nil and not table.contains(exceptions, value.recipe) then
                         table.remove(technology.effects, i)
                     end

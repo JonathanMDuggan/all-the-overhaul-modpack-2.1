@@ -289,17 +289,18 @@ for i = 6, 10 do
     data.raw.technology["5d-gun-turret-sniper-" .. i] = nil
     data.raw.technology["laser-turret-" .. i] = nil
     data.raw.technology["5d-laser-turret-sniper-" .. i] = nil
-    data.raw.technology["5d-flamethrower-turrets-" .. i] = nil
+    data.raw.technology["flamethrower-" .. (i + 1)] = nil
 end
 
 -- Remove tier 4 and 5 of sniper laser turrets and burner turrets
 for i = 4, 5 do
     data.raw.technology["5d-laser-turret-sniper-" .. i] = nil
-    data.raw.technology["5d-flamethrower-turrets-" .. i] = nil
+    data.raw.technology["flamethrower-" .. (i + 1)] = nil
 end
 
 -- Somehow flamethrower techs go from 1 to 9 while all others with vanilla tier 1 go from 2 to 10
-data.raw.technology["5d-flamethrower-turrets-3"] = nil
+-- (5dim for Factorio 2.1 renamed 5d-flamethrower-turrets-<n> to flamethrower-<n + 1>; the same technologies are removed)
+data.raw.technology["flamethrower-4"] = nil
 
 local gunTech1 = atom.util.Technology("gun-turret")
 gunTech1.prototype.icon = "__5dim_battlefield__/graphics/icon/gun-turret/normal/gun-turret-normal-01.png"
@@ -418,7 +419,7 @@ burnerTech1.prototype.icon = "__5dim_battlefield__/graphics/icon/flamethrower-tu
 burnerTech1.prototype.icon_size = 64
 burnerTech1.prototype.unit.count = 100
 
-local burnerTech2 = atom.util.Technology("5d-flamethrower-turrets-1")
+local burnerTech2 = atom.util.Technology("flamethrower-2")
 burnerTech2.prototype.unit.count = 200
 burnerTech2.addPrerequisite("productivity-science-pack")
 burnerTech2.addPrerequisite("se-rocket-science-pack")
@@ -426,7 +427,7 @@ burnerTech2.addIngredient("chemical-science-pack")
 burnerTech2.addIngredient("productivity-science-pack")
 burnerTech2.addIngredient("se-rocket-science-pack")
 
-local burnerTech3 = atom.util.Technology("5d-flamethrower-turrets-2")
+local burnerTech3 = atom.util.Technology("flamethrower-3")
 burnerTech3.addPrerequisite("kr-imersium-processing")
 burnerTech3.addPrerequisite("production-science-pack")
 burnerTech3.addIngredient("chemical-science-pack")

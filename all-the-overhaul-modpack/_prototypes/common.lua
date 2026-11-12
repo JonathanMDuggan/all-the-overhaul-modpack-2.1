@@ -136,7 +136,7 @@ for _, item in pairs(data.raw.item) do
 end
 
 --248k Science cubes are tools not items, so this is needed for that
-for _, item in pairs(data.raw.tool) do
+for _, item in pairs(data.raw.tool or {}) do -- nil when no mod defines a tool (science packs are items since 2.1)
     if item.stack_size > 200 then
         item.stack_size = 200
     elseif not item.stack_size then
