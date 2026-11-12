@@ -93,7 +93,8 @@ def resolve():
     while queue:
         text, parent = queue.pop()
         prefix, name = parse_dependency(text)
-        if prefix or name in BUILTIN or name in local or name in seen:
+        # "~" is a required dependency that does not affect load order
+        if prefix not in ("", "~") or name in BUILTIN or name in local or name in seen:
             continue
         seen.add(name)
         info = portal_info(name)
