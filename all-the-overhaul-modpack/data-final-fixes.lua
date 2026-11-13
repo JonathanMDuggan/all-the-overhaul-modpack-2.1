@@ -1,5 +1,7 @@
 atom.stage = "final-fixes"
 
+-- Reset the 5dim modules to their Factorio 2.0 values before anything builds on them (see integrations/5dim/baseline.lua)
+require("__all-the-overhaul-modpack__/integrations/5dim/baseline")("final-fixes")
 require("_data-final-fixes")
 
 require("content.fixes")

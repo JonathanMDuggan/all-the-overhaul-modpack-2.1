@@ -53,12 +53,34 @@ plus the mods in `ported-dependencies/`), in a separate mods folder filled by `t
   resolves the settings per calling mod. Worth reporting upstream (https://github.com/Morganite-MLI/bzlib).
 - BrimStuff removed entries from crafting category lists by assigning nil, leaving holes; fixed in the ported copy.
 
+## 5dim kept at its Factorio 2.0 state
+
+The 5dim modules were reworked for 2.1 (re-priced recipes and technologies, new machine and turret stats, and a lot of
+new military content). ATOM was balanced against the 2.0 releases, so `integrations/5dim/baseline.lua` resets them:
+
+- 2218 values that differ between 5dim's 2.0 and 2.1 releases (recipe ingredients, technology costs and prerequisites,
+  speeds, energy use, module slots, health, turret ranges and damage, ...) are set back to the 2.0 value, as long as
+  no other mod has changed them in the meantime. 2214 apply in the data stage.
+- Everything 5dim added after 2.0 is hidden and cannot be unlocked: 103 technologies, 110 recipes and their items
+  (artillery turrets and shells, slow turrets, land mines, grenades, capsules, combat robots, sniper rifle and ammo,
+  uranium shotgun shells, stone/coal/uranium dust).
+
+How the baseline was made: 5dim's 2.0 source (public repository, the commits of 5dim_core 2.0.42, _automation 2.0.3,
+_nuclear 2.0.4, _resources 2.0.6, _battlefield 2.0.5) was run in Factorio 2.1.24 with a shim that absorbs missing
+graphics, and its prototypes were recorded and compared with the 2.1 releases. Checked afterwards in the full pack: of
+178 machine/turret stats that differ between the two releases, 155 equal the 2.0 value and 23 have a third value set by
+ATOM or another mod; none is left at the 2.1 value.
+
+Limits: the repository commits are one patch version after the portal releases ATOM 2.2.7 was built against, so tiny
+differences are possible. Small and big gun/laser turrets no longer exist in 5dim (ATOM had removed their technologies
+anyway). Graphics, sounds, crafting categories, sort orders and the new tier overlay icons are not reset. The entities
+of the hidden content still exist, they just cannot be built.
+
 ## Open points found while testing
 
-- 5dim_battlefield 2.1 adds content the 2.0 pack never had (artillery turret tiers, slow turrets, mortar turrets,
-  grenades, land mines, combat robots, sniper rifle, ...). ATOM does not hide or rebalance any of it yet.
 - mini-machines 9.5.9 requires mini-micro-settings, which ATOM's history calls incompatible with its balance.
-- `5d-masher-05` already contains concrete (20) in 5dim 2.1; ATOM sets it to 4 as it did before.
+- Other dependencies (Krastorio 2, Space Exploration, BZ, Bio Industries, ...) were not compared with their 2.0
+  releases the way 5dim was.
 
 ## Deviations
 
